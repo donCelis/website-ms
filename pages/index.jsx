@@ -1,32 +1,34 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "@styles/Home.module.css";
-import Link from "next/link";
+import Layout from "@components/layout";
+import Header from "@components/header";
+import styles from "@styles/home.module.css";
 
-export default function Home({ title, mesagge }) {
+export default function Home() {
+  const data_head = {
+    title: "Home - Website - Ms",
+    description: "Prueba realizada para Ilógica",
+  };
+
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content="Prueba realizada para Ilógica" />
-        <link rel="icon" href="images/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          {mesagge}
-          <Link href="/timeline">
-            <a>Next.js!</a>
-          </Link>
-        </h1>
-        <Image src="/images/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        <Layout {...data_head}>
+          <Header />
+          <section>
+            <h1>Hola Mundo</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+              corrupti!
+            </p>
+          </section>
+        </Layout>
       </main>
+      <article>
+        <h1>Hola Mundo</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+          unde!
+        </p>
+      </article>
     </>
   );
 }
-
-Home.getInitialProps = async () => {
-  const req = await fetch("http://localhost:3000/api/hello");
-  const res = await req.json();
-  return res;
-};

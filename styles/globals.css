@@ -1,16 +1,16 @@
+:root {
+  --tangerine: hsl(32, 100%, 50%);
+  --dark: hsl(251, 41%, 13%);
+  --dusty-blue: hsl(184, 34%, 50%);
+  --dusty-teal: hsl(181, 36%, 36%);
+  --charcoal-grey: hsl(225, 6%, 24%);
+  --white: #ffffff;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
