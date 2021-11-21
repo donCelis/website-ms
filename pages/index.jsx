@@ -1,8 +1,9 @@
 import Layout from "@components/layout";
 import Header from "@components/header";
-import styles from "@styles/home.module.css";
+import Gallery from "@components/gallery";
+import "@styles/home.scss";
 
-export default function Home() {
+const Home = () => {
   const data_head = {
     title: "Home - Website - Ms",
     description: "Prueba realizada para Ilógica",
@@ -10,25 +11,45 @@ export default function Home() {
 
   return (
     <>
-      <main className={styles.main}>
-        <Layout {...data_head}>
+      <Layout {...data_head}>
+        <main className="home">
           <Header />
-          <section>
-            <h1>Hola Mundo</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
-              corrupti!
-            </p>
+          <Gallery />
+          {/* <section className="container">
+            <div className="col-12 col-md-5">
+              <article className="article">
+                <div className="line"></div>
+                <h2 className="article-title">
+                  Lorem ipsum dolor <br /> sit amet
+                </h2>
+                <p className="article-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore.
+                </p>
+                <button className="article-btn">
+                  Lorem ipsum{" "}
+                  <span>
+                    <img
+                      className="flecha"
+                      src="./images/flecha.svg"
+                      alt="Arrow"
+                    />
+                  </span>
+                </button>
+              </article>
+            </div>
           </section>
-        </Layout>
-      </main>
-      <article>
-        <h1>Hola Mundo</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
-          unde!
-        </p>
-      </article>
+          <section className="dots">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </section> */}
+        </main>
+      </Layout>
     </>
   );
-}
+};
+
+export default Home;

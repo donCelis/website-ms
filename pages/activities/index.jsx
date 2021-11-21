@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "@components/layout";
 
-const Activities = ({ data }) => {
+const Activities = ({ posts }) => {
   const data_head = {
     title: "Actividades - Website - Ms",
     description: "Prueba realizada para Ilógica",
@@ -10,7 +10,7 @@ const Activities = ({ data }) => {
   return (
     <Layout {...data_head}>
       <section className="row">
-        {data.map(({ id, title, image, description, category }) => (
+        {posts.map(({ id, title, image, description }) => (
           <div className="col-4" key={id}>
             <article className="card">
               <Image
@@ -35,19 +35,20 @@ const Activities = ({ data }) => {
     </Layout>
   );
 };
+
 export default Activities;
 
-export async function getServerSideProps() {
+export const getStaticProps = async () => {
   try {
     const req = await fetch(`https://fakestoreapi.com/products`);
     const res = await req.json();
 
     return {
       props: {
-        data: res,
+        posts: res,
       },
     };
   } catch (error) {
     console.log(error);
   }
-}
+};

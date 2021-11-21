@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./navigation";
-import "@styles/components/header.css";
+import "@styles/components/header.scss";
 
 const Header = () => {
   return (
@@ -16,6 +16,7 @@ const Header = () => {
                 alt="Logo website ms"
                 width={160}
                 height={44}
+                layout="fixed"
               />
             </a>
           </Link>

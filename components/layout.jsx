@@ -14,7 +14,7 @@ const Layout = ({ children, title, description }) => {
 };
 
 Layout.defaultProps = {
-  title: "por defecto",
+  title: "Website -  Ms",
   description: "por defecto"
 }
 

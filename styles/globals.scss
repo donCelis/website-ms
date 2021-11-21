@@ -4,7 +4,8 @@
   --dusty-blue: hsl(184, 34%, 50%);
   --dusty-teal: hsl(181, 36%, 36%);
   --charcoal-grey: hsl(225, 6%, 24%);
-  --white: #ffffff;
+  --white: hsl(0, 0%, 100%);
+  --tomato: hsl(1, 81%, 58%);
 }
 *{
   margin: 0;
@@ -13,4 +14,7 @@
 html,
 body {
   padding: 0;
+}
+h1{
+  margin: 0;
 }

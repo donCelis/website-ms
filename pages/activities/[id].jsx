@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "@components/layout";
 
-const Single_activities = ({ data }) => {
-  const { id, title, description, image } = data;
+const Activity = ({ post }) => {
+  const { id, title, description, image } = post;
   const data_head = {
     title,
     description,
@@ -24,9 +24,9 @@ const Single_activities = ({ data }) => {
     </Layout>
   );
 };
-export default Single_activities;
+export default Activity;
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   try {
     const req = await fetch("https://fakestoreapi.com/products");
     const res = await req.json();
@@ -39,19 +39,19 @@ export async function getStaticPaths() {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps = async ({ params }) => {
   try {
     const req = await fetch(`https://fakestoreapi.com/products/${params.id}`);
     const res = await req.json();
 
     return {
       props: {
-        data: res,
+        post: res,
       },
     };
   } catch (error) {
     console.log(error);
   }
-}
+};

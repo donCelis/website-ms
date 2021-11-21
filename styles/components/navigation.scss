@@ -1,0 +1,39 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 1.8rem 1rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 1.6rem;
+      height: 0.3rem;
+      background-color: var(--white);
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity ease-in-out 300ms;
+    }
+    &.active {
+      font-weight: bold;
+      &::after {
+        background-color: var(--dusty-blue);
+        opacity: 1;
+      }
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
