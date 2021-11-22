@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./navigation";
-import "@styles/components/header.scss";
+import styles from "@styles/components/header.module.scss";
 
 const Header = () => {
   return (
-    <header>
-      <section className="container">
+    <header className={styles.header_site}>
+      <section className="container d-flex align-items-center justify-content-between">
         <h1 className="logo">
           <Link href="/">
             <a>
