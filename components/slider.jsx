@@ -1,11 +1,12 @@
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/pagination";
 
 import { data_slider } from "data";
 
-const Item_slider = ({ title, name_btn, paragraph}) => {
+const Item_slider = ({ title, name_btn, paragraph }) => {
   return (
     <>
       <section className="item-slider">
@@ -42,9 +43,13 @@ const Slider = () => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       modules={[Pagination]}
+      tag="section"
+      wrapperTag="ul"
+      className="swiper-slider-home"
     >
       {data_slider.map((item, index) => (
         <SwiperSlide
+          tag="li"
           style={{ backgroundImage: `url(${item.image})` }}
           key={index}
         >

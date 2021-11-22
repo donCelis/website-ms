@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./navigation";
-import styles from "@styles/components/header.module.scss";
+import "@styles/components/header.scss";
 
 const Header = () => {
   return (
-    <header className={styles.header_site}>
+    <header className="header_site sticky-top">
       <section className="container d-flex align-items-center justify-content-between">
         <h1 className="logo">
           <Link href="/">

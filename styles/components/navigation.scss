@@ -5,7 +5,7 @@
   a {
     text-decoration: none;
     text-transform: capitalize;
-    color: var(--white);
+    color: var(--dark);
     padding: 1.8rem 1rem;
     position: relative;
     &::after {
@@ -15,7 +15,7 @@
       bottom: 0;
       width: 1.6rem;
       height: 0.3rem;
-      background-color: var(--white);
+      background-color: var(--dark);
       transform: translateX(-50%);
       opacity: 0;
       transition: opacity ease-in-out 300ms;

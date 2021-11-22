@@ -24,9 +24,68 @@ const data_slider = [
 
 const data_features = [
   {
-    title: "",
-    image: ""
-  }
-]
+    title: "Lorem, ipsum dolor.",
+    image: "/images/features/80-300x300.jpg",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    image: "/images/features/230-300x300.jpg",
+  },
+  {
+    title: "Lorem, ipsum dolor.",
+    image: "/images/features/938-300x300.jpg",
+  },
+];
 
-export { data_slider };
+const data_services = [
+  {
+    title: "Lorem ipsum",
+    image: "/images/loves.svg",
+    name_btn: "Lorem ipsum",
+  },
+  {
+    title: "Lorem ipsum",
+    image: "/images/hands.svg",
+    name_btn: "Lorem ipsum",
+  },
+  {
+    title: "Lorem ipsum",
+    image: "/images/portfolios.svg",
+    name_btn: "Lorem ipsum",
+  },
+];
+const data_allies = [
+  {
+    image: "/images/allies/juegging.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/riverbed.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/wise.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/kiosko.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/juegging.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/riverbed.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/wise.png",
+    alt: "Lorem ipsum",
+  },
+  {
+    image: "/images/allies/kiosko.png",
+    alt: "Lorem ipsum",
+  },
+];
+export { data_slider, data_features, data_services, data_allies };

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@styles/components/navigation.module.scss";
+import "@styles/components/navigation.scss";
 
 const Navigation = () => {
   const menu_links = [
@@ -21,7 +21,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={styles.menu}>
+    <nav className="menu">
       {menu_links.map(({ name, path, visit }, key) => (
         <Link key={key} href={path}>
           <a className={visit ? styles.active : ""}>{name}</a>

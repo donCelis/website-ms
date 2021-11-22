@@ -1,8 +1,10 @@
-const Item_feature = ({ title, image, mod = "" }) => {
+import { data_features } from "data";
+
+const Item_feature = ({ title, image }) => {
   return (
-    <div className={"photo " + mod}>
+    <div className="photo">
       <p>{title}</p>
-      <img className="img-fluid" src={image} />
+      <img className="img-fluid" src={image} alt={title} />
     </div>
   );
 };
@@ -38,21 +40,9 @@ const Features = () => {
           </aside>
           <aside className="col-12 col-lg-6">
             <section className="features-images">
-              <Item_feature
-                mod="middle"
-                title="Lorem, ipsum dolor."
-                image="/images/features/80-300x300.jpg"
-              />
-              <Item_feature
-                mod="move-up"
-                title="Lorem, ipsum dolor."
-                image="/images/features/230-300x300.jpg"
-              />
-              <Item_feature
-                mod="move-down"
-                title="Lorem, ipsum dolor."
-                image="/images/features/938-300x300.jpg"
-              />
+              {data_features.map((item, id) => (
+                <Item_feature key={id} {...item} />
+              ))}
             </section>
           </aside>
         </div>
