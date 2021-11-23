@@ -15,27 +15,13 @@
   }
   &-body {
     .second-menu {
-      h5{
-        margin-bottom: 1.5rem;
-      }
       nav {
-        display: grid;
+        display: inline-grid;
         gap: 1rem;
         a {
           text-transform: capitalize;
           color: var(--white);
           text-decoration: none;
-        }
-      }
-    }
-    .local-info {
-      h5{
-        margin-bottom: 1.5rem;
-      }
-      ul {
-        li:last-child {
-          margin-top: 1rem;
-          font-weight: bold;
         }
       }
     }

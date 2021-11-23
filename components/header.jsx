@@ -6,23 +6,35 @@ import "@styles/components/header.scss";
 const Header = () => {
   return (
     <header className="header_site sticky-top">
-      <section className="container d-flex align-items-center justify-content-between">
-        <h1 className="logo-dark">
-          <Link href="/">
-            <a>
-              <Image
-                priority
-                src="/images/logo-ms.svg"
-                alt="Logo website ms"
-                width={160}
-                height={44}
-                layout="fixed"
-              />
-            </a>
-          </Link>
-        </h1>
-        <Navigation />
-      </section>
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <section className="container">
+          <h1 className="logo-dark navbar-brand">
+            <Link href="/">
+              <a>
+                <Image
+                  priority
+                  src="/images/logo-ms.svg"
+                  alt="Logo website ms"
+                  width={160}
+                  height={44}
+                  layout="fixed"
+                />
+              </a>
+            </Link>
+          </h1>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#main-menu"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="main-menu">
+            <Navigation />
+          </div>
+        </section>
+      </nav>
     </header>
   );
 };

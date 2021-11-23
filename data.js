@@ -106,4 +106,33 @@ const data_partners = [
     alt: "Lorem ipsum",
   },
 ];
-export { data_slider, data_features, data_services, data_partners, menu_links };
+const socials_links = [
+  {
+    image: "/images/socials-icons/facebook-circle.svg",
+    alt: "facebook",
+  },
+  {
+    image: "/images/socials-icons/instagram-circle.svg",
+    alt: "instagram",
+  },
+  {
+    image: "/images/socials-icons/linkedin-circle.svg",
+    alt: "linkedin",
+  },
+  {
+    image: "/images/socials-icons/twitter-circle.svg",
+    alt: "twitter",
+  },
+  {
+    image: "/images/socials-icons/youtube-circle.svg",
+    alt: "youtube",
+  },
+];
+export {
+  data_slider,
+  data_features,
+  data_services,
+  data_partners,
+  menu_links,
+  socials_links,
+};
