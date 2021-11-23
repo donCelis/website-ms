@@ -6,7 +6,7 @@ import "@styles/components/header.scss";
 const Header = () => {
   return (
     <header className="header_site sticky-top">
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg">
         <section className="container">
           <h1 className="logo-dark navbar-brand">
             <Link href="/">
@@ -28,7 +28,7 @@ const Header = () => {
             data-bs-toggle="collapse"
             data-bs-target="#main-menu"
           >
-            <span className="navbar-toggler-icon"></span>
+            <img src="/images/icons/icon-menu.svg" alt="icon main menu" />
           </button>
           <div className="collapse navbar-collapse" id="main-menu">
             <Navigation />

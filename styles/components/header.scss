@@ -12,4 +12,7 @@
       filter: invert(0);
     }
   }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
 }

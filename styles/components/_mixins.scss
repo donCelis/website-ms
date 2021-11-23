@@ -1,4 +1,9 @@
 /* mixins responsive */
+@mixin mobile-xs {
+  @media only screen and (max-width: 375px) {
+    @content;
+  }
+}
 @mixin mobile {
   @media only screen and (max-width: 576px) {
     @content;

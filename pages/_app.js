@@ -7,7 +7,7 @@ import "@styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    import("bootstrap/js/dist/collapse");
   }, []);
   return (
     <>
