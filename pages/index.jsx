@@ -8,7 +8,7 @@ import "@styles/home.scss";
 import "@styles/components/button.scss";
 import To_action from "@components/home/toaction";
 
-const Home = () => {
+const Home = ({ data }) => {
   const data_head = {
     title: "Home - Website - Ms",
     description: "Prueba realizada para Ilógica",
@@ -19,7 +19,7 @@ const Home = () => {
       <main className="home">
         <Slider />
       </main>
-      <Features />
+      <Features contentInfo={data.data_features} />
       <Services />
       <Partners />
       <To_action />
@@ -28,3 +28,18 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async () => {
+  try {
+    const req = await fetch("/api/info");
+    const res = await req.json();
+
+    return {
+      props: {
+        data: res,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+  }
+};

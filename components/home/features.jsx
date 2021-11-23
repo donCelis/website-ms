@@ -1,4 +1,4 @@
-import { data_features } from "data";
+//import { data_features } from "data";
 
 const Item_feature = ({ title, image }) => {
   return (
@@ -9,7 +9,7 @@ const Item_feature = ({ title, image }) => {
   );
 };
 
-const Features = () => {
+const Features = ({ contentInfo }) => {
   return (
     <section className="features">
       <div className="container">
@@ -40,7 +40,7 @@ const Features = () => {
           </aside>
           <aside className="g-col-12 g-col-lg-6">
             <section className="features-images">
-              {data_features.map((item, id) => (
+              {contentInfo.map((item, id) => (
                 <Item_feature key={id} {...item} />
               ))}
             </section>
