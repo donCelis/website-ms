@@ -17,7 +17,7 @@ const Item_service = ({ title, image, name_btn, mod = "" }) => {
   );
 };
 
-const Services = () => {
+const Services = ({ content }) => {
   const last_element = data_services.length - 1;
   return (
     <section className="services">
@@ -29,7 +29,7 @@ const Services = () => {
           </h3>
         </div>
         <section className="grid g-row-gap-3">
-          {data_services.map((props, id) => (
+          {content.map((props, id) => (
             <Item_service
               key={id}
               {...props}

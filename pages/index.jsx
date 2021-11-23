@@ -19,8 +19,8 @@ const Home = ({ data }) => {
       <main className="home">
         <Slider />
       </main>
-      <Features contentInfo={data.data_features} />
-      <Services />
+      <Features />
+      <Services content={data.services} />
       <Partners />
       <To_action />
     </Layout>
@@ -31,7 +31,7 @@ export default Home;
 
 export const getStaticProps = async () => {
   try {
-    const req = await fetch("/api/info");
+    const req = await fetch("http://localhost:3000/api/info");
     const res = await req.json();
 
     return {
