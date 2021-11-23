@@ -2,10 +2,10 @@ import { data_features } from "data";
 
 const Item_feature = ({ title, image }) => {
   return (
-    <div className="photo">
+    <picture className="photo">
       <p>{title}</p>
       <img className="img-fluid" src={image} alt={title} />
-    </div>
+    </picture>
   );
 };
 

@@ -1,0 +1,64 @@
+/* styles - partners */
+.partners {
+  padding: 6rem 0;
+  .swiper-partners {
+    padding: 3rem 1rem 4rem;
+    .swiper-button-prev,
+    .swiper-button-next {
+      right: 0;
+      left: auto;
+      bottom: 0;
+      top: auto;
+      &.swiper-button-disabled {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+    }
+    .swiper-button-prev {
+      right: 4rem;
+      &::after {
+        content: "";
+        width: 2.5rem;
+        height: 2rem;
+        background: url("/images/path.svg") no-repeat center / contain;
+        transform: scale(-1);
+      }
+    }
+    .swiper-button-next {
+      right: 1rem;
+      &::after {
+        content: "";
+        width: 2.5rem;
+        height: 2rem;
+        background: url("/images/path.svg") no-repeat center / contain;
+      }
+    }
+  }
+  &-title {
+    margin-top: 1.5rem;
+    @include mobile {
+      text-align: center;
+    }
+    &.size-small {
+      font-size: 1.2em;
+    }
+    &.size-med {
+      font-size: 2em;
+    }
+    &.size-big {
+      font-size: 2.8em;
+    }
+  }
+  &-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-align: center;
+    background: var(--white);
+    padding: 2rem 1rem;
+    max-height: 7.5rem;
+    min-height: 7.5rem;
+    box-shadow: var(--box-shadow);
+  }
+}

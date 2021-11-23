@@ -1,0 +1,50 @@
+/* styles - services */
+.services {
+  padding: 4rem 0;
+  background: linear-gradient(
+      90deg,
+      var(--dusty-blue) 60%,
+      var(--dark-grey-blue) 100%
+    )
+    no-repeat center / cover;
+  &-title {
+    color: var(--white);
+    margin: 1.5rem 0 3rem;
+    @include mobile {
+      text-align: center;
+    }
+    &.size-small {
+      font-size: 1.2em;
+    }
+    &.size-med {
+      font-size: 2em;
+    }
+    &.size-big {
+      font-size: 2.8em;
+    }
+  }
+  &-card {
+    padding: 3rem 0;
+    border-radius: 6px;
+    text-align: center;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    @include mobile {
+      width: 70%;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    &-img {
+      margin-bottom: 1.2rem;
+      height: 90px;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    &-title {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+  }
+}

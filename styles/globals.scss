@@ -1,4 +1,4 @@
-@use "./components/mixins" as *;
+@use "./components/partials" as *;
 
 :root {
   --tangerine: hsl(32, 100%, 50%);
@@ -8,15 +8,19 @@
   --dark-grey-blue: hsl(178, 38%, 29%);
   --charcoal-grey: hsl(225, 6%, 24%);
   --white: hsl(0, 0%, 100%);
+  --white-light: hsl(0, 0%, 98%);
   --tomato: hsl(1, 81%, 58%);
   --tomato-hover: hsl(6, 63%, 46%);
   --overlay-image: linear-gradient(
     90deg,
-    hsla(228, 100%, 16%, 0.3) 0%,
-    hsla(40, 95%, 58%, 0.25) 100%
+    hsla(228, 100%, 16%, 0.6) 0%,
+    hsla(40, 95%, 58%, 0.5) 100%
   );
   --box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
 }
+
+$enable-grid-classes: false !default;
+$enable-cssgrid: true !default;
 
 * {
   margin: 0;
@@ -45,6 +49,9 @@ ol {
   .g-gap-0 {
     gap: 0;
   }
+}
+figure {
+  margin: 0;
 }
 @include mobile {
   .g-row-gap-2 {

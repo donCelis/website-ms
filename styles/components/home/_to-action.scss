@@ -1,0 +1,17 @@
+.to-action {
+  padding: 4rem 0;
+  background: url("/images/shape-left.svg") no-repeat left top,
+    url("/images/shape-right.svg") no-repeat right bottom,
+    linear-gradient(140deg, var(--dusty-blue) 0%, var(--dark-grey-blue) 120%);
+  color: var(--white);
+  .line {
+    background: var(--white);
+  }
+  .title {
+    margin: 1rem 0;
+  }
+  &-list {
+    list-style: disc;
+    padding-inline-start: 1.2rem;
+  }
+}

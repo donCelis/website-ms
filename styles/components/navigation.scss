@@ -1,4 +1,4 @@
-@use "mixins" as *;
+@use "./partials" as *;
 
 .menu {
   display: flex;
@@ -30,7 +30,6 @@
       transition: opacity ease-in-out 300ms;
     }
     &.active {
-      font-weight: bold;
       &::after {
         background-color: var(--dusty-blue);
         opacity: 1;

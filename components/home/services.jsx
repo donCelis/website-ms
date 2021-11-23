@@ -17,7 +17,7 @@ const Item_service = ({ title, image, name_btn, mod = "" }) => {
   );
 };
 
-const Services = ({ content }) => {
+const Services = ({ content = "" }) => {
   const last_element = data_services.length - 1;
   return (
     <section className="services">

@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import Head from "next/head";
 
-import "bootstrap/scss/bootstrap.scss";
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/scss/bootstrap-grid.scss";
 import "@styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    import("bootstrap/js/dist/collapse");
+    import("bootstrap/dist/js/bootstrap");
   }, []);
   return (
     <>

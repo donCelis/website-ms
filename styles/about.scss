@@ -1,0 +1,36 @@
+.header-page {
+  background: var(--dark);
+  color: var(--white);
+  padding: 4rem 0;
+  h2 {
+    font-size: 2.6em;
+  }
+}
+.about {
+  &-description {
+    background: var(--white-light);
+    padding: 4rem 0;
+    /* &-text {
+    } */
+    &-photo {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: -2rem;
+        width: 90%;
+        height: 90%;
+        background: transparent;
+        border-radius: 6px;
+        border: 2px solid var(--tangerine);
+        z-index: 0;
+      }
+      img {
+        border-radius: 6px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}

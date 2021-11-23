@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "./header";
 import Footer from "./footer";
 
-const Layout = ({ children, title, description }) => {
+const Layout = ({ title, description, children }) => {
   return (
     <>
       <Head>
@@ -19,7 +19,8 @@ const Layout = ({ children, title, description }) => {
 
 Layout.defaultProps = {
   title: "Website -  Ms",
-  description: "por defecto",
+  description:
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et, dicta.",
 };
 
 export default Layout;

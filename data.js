@@ -1,38 +1,35 @@
 const menu_links = [
   {
     name: "nosotros",
-    path: "/us",
-    visit: false,
+    path: "/about",
   },
   {
     name: "actividades",
     path: "/activities",
-    visit: false,
   },
   {
     name: "contacto",
     path: "/contact",
-    visit: false,
   },
 ];
 
 const data_slider = [
   {
-    image: "/images/bg-home.png",
+    image: "/images/sliders/slider-1.jpg",
     title: `Lorem ipsum dolor sit amet 1`,
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore.`,
     name_btn: "Lorem ipsum",
   },
   {
-    image: "/images/bg-home.png",
+    image: "/images/sliders/slider-1.jpg",
     title: "Lorem ipsum dolor sit amet 2",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore.`,
     name_btn: "Lorem ipsum",
   },
   {
-    image: "/images/bg-home.png",
+    image: "/images/sliders/slider-1.jpg",
     title: "Lorem ipsum dolor sit amet 3",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore.`,
