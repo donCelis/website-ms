@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="header_site sticky-top">
       <section className="container d-flex align-items-center justify-content-between">
-        <h1 className="logo">
+        <h1 className="logo-dark">
           <Link href="/">
             <a>
               <Image

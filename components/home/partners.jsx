@@ -3,17 +3,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { data_allies } from "data";
+import { data_partners } from "data";
 
-const Item_allies = ({ image, alt }) => {
+const Item_partners = ({ image, alt }) => {
   return (
-    <article className="allies-card">
-      <img className="allies-card-img img-fluid" src={image} alt={alt} />
+    <article className="partners-card">
+      <img className="partners-card-img img-fluid" src={image} alt={alt} />
     </article>
   );
 };
 
-const Allies = () => {
+const Partners = () => {
   const breakpoints = {
     375: {
       spaceBetween: 60,
@@ -37,11 +37,11 @@ const Allies = () => {
     },
   };
   return (
-    <section className="allies">
+    <section className="partners">
       <div className="container">
         <div className="text">
           <div className="line"></div>
-          <h3 className="allies-title">Lorem ipsum dolor sit amet</h3>
+          <h3 className="partners-title size-med">Lorem ipsum dolor sit amet</h3>
         </div>
         <Swiper
           modules={[Navigation]}
@@ -50,11 +50,11 @@ const Allies = () => {
           breakpoints={breakpoints}
           tag="section"
           wrapperTag="ul"
-          className="swiper-allies"
+          className="swiper-partners"
         >
-          {data_allies.map((item, id) => (
+          {data_partners.map((item, id) => (
             <SwiperSlide tag="li" key={id}>
-              <Item_allies {...item} />
+              <Item_partners {...item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -63,4 +63,4 @@ const Allies = () => {
   );
 };
 
-export default Allies;
+export default Partners;

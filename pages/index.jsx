@@ -1,9 +1,12 @@
 import Layout from "@components/layout";
-import { Slider } from "@components/slider";
+import Slider from "@components/home/slider";
+import Features from "@components/home/features";
+import Services from "@components/home/services";
+import Partners from "@components/home/partners";
+
 import "@styles/home.scss";
-import Features from "@components/features";
-import Services from "@components/services";
-import Allies from "@components/allies";
+import "@styles/components/button.scss";
+import To_action from "@components/home/toaction";
 
 const Home = () => {
   const data_head = {
@@ -18,7 +21,8 @@ const Home = () => {
       </main>
       <Features />
       <Services />
-      <Allies />
+      <Partners />
+      <To_action />
     </Layout>
   );
 };

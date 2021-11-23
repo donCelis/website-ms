@@ -1,25 +1,7 @@
 import Link from "next/link";
 import "@styles/components/navigation.scss";
-
+import { menu_links } from "data";
 const Navigation = () => {
-  const menu_links = [
-    {
-      name: "nosotros",
-      path: "/us",
-      visit: false,
-    },
-    {
-      name: "actividades",
-      path: "/activities",
-      visit: false,
-    },
-    {
-      name: "contacto",
-      path: "/contact",
-      visit: false,
-    },
-  ];
-
   return (
     <nav className="menu">
       {menu_links.map(({ name, path, visit }, key) => (

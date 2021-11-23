@@ -15,9 +15,9 @@ const Item_slider = ({ title, name_btn, paragraph }) => {
             <aside className="col-12 col-md-10 col-lg-6">
               <article className="article">
                 <div className="line"></div>
-                <h2 className="article_title">{title}</h2>
+                <h2 className="article_title size-big">{title}</h2>
                 <p className="article-paragraph">{paragraph}</p>
-                <button className="article_btn">
+                <button className="button button-red">
                   {name_btn}
                   <span>
                     <img
@@ -60,4 +60,4 @@ const Slider = () => {
   );
 };
 
-export { Slider };
+export default Slider;

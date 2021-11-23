@@ -4,7 +4,12 @@
   z-index: 10; */
   background: var(--white);
   border-bottom: 1px solid var(--white);
-  .logo{
-    filter: invert(1);
+  .logo {
+    &-dark {
+      filter: invert(1);
+    }
+    &-white {
+      filter: invert(0);
+    }
   }
 }

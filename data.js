@@ -1,3 +1,21 @@
+const menu_links = [
+  {
+    name: "nosotros",
+    path: "/us",
+    visit: false,
+  },
+  {
+    name: "actividades",
+    path: "/activities",
+    visit: false,
+  },
+  {
+    name: "contacto",
+    path: "/contact",
+    visit: false,
+  },
+];
+
 const data_slider = [
   {
     image: "/images/bg-home.png",
@@ -40,52 +58,52 @@ const data_features = [
 const data_services = [
   {
     title: "Lorem ipsum",
-    image: "/images/loves.svg",
+    image: "/images/icons/loves.svg",
     name_btn: "Lorem ipsum",
   },
   {
     title: "Lorem ipsum",
-    image: "/images/hands.svg",
+    image: "/images/icons/hands.svg",
     name_btn: "Lorem ipsum",
   },
   {
     title: "Lorem ipsum",
-    image: "/images/portfolios.svg",
+    image: "/images/icons/portfolios.svg",
     name_btn: "Lorem ipsum",
   },
 ];
-const data_allies = [
+const data_partners = [
   {
-    image: "/images/allies/juegging.png",
+    image: "/images/partners/juegging.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/riverbed.png",
+    image: "/images/partners/riverbed.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/wise.png",
+    image: "/images/partners/wise.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/kiosko.png",
+    image: "/images/partners/kiosko.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/juegging.png",
+    image: "/images/partners/juegging.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/riverbed.png",
+    image: "/images/partners/riverbed.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/wise.png",
+    image: "/images/partners/wise.png",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/allies/kiosko.png",
+    image: "/images/partners/kiosko.png",
     alt: "Lorem ipsum",
   },
 ];
-export { data_slider, data_features, data_services, data_allies };
+export { data_slider, data_features, data_services, data_partners, menu_links };

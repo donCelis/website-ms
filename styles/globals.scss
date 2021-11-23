@@ -3,14 +3,17 @@
   --dark: hsl(251, 41%, 13%);
   --dusty-blue: hsl(184, 34%, 50%);
   --dusty-teal: hsl(181, 36%, 36%);
+  --dark-grey-blue: hsl(178, 38%, 29%);
   --charcoal-grey: hsl(225, 6%, 24%);
   --white: hsl(0, 0%, 100%);
   --tomato: hsl(1, 81%, 58%);
+  --tomato-hover: hsl(6, 63%, 46%);
   --overlay-image: linear-gradient(
     90deg,
-    rgba(0, 17, 82, 0.3) 0%,
-    rgba(250, 183, 44, 0.25) 100%
+    hsla(228, 100%, 16%, 0.3) 0%,
+    hsla(40, 95%, 58%, 0.25) 100%
   );
+  --box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
 }
 * {
   margin: 0;
@@ -28,4 +31,10 @@ h1 {
   width: 2rem;
   height: 0.2rem;
   background: var(--tangerine);
+}
+ul,
+ol {
+  padding-inline-start: 0;
+  list-style: none;
+  margin: 0;
 }

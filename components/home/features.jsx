@@ -17,7 +17,7 @@ const Features = () => {
           <aside className="col-12 col-lg-6">
             <article className="article dark">
               <div className="line"></div>
-              <h3 className="article_title">¿Lorem ipsum?</h3>
+              <h3 className="article_title size-med">¿Lorem ipsum?</h3>
               <p className="article-paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -26,7 +26,7 @@ const Features = () => {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat.
               </p>
-              <button className="article_btn">
+              <button className="button button-red">
                 Lorem
                 <span>
                   <img
