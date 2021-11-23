@@ -13,8 +13,8 @@ const Features = () => {
   return (
     <section className="features">
       <div className="container">
-        <div className="row gx-5 align-items-center">
-          <aside className="col-12 col-lg-6">
+        <div className="grid g-gap-0 align-items-center">
+          <aside className="g-col-12 g-col-lg-6">
             <article className="article dark">
               <div className="line"></div>
               <h3 className="article_title size-med">¿Lorem ipsum?</h3>
@@ -38,7 +38,7 @@ const Features = () => {
               </button>
             </article>
           </aside>
-          <aside className="col-12 col-lg-6">
+          <aside className="g-col-12 g-col-lg-6">
             <section className="features-images">
               {data_features.map((item, id) => (
                 <Item_feature key={id} {...item} />

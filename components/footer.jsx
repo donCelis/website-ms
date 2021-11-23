@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <section className="footer-header border-bottom py-4">
         <div className="container">
-          <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-center justify-content-between g-row-gap-2">
             <h1 className="logo logo-white">
               <Link href="/">
                 <a>
@@ -24,9 +24,9 @@ const Footer = () => {
               </Link>
             </h1>
             <ul className="socials">
-              {socials_links.map(({ image, alt }, id) => (
+              {socials_links.map(({ image, alt, link }, id) => (
                 <li key={id}>
-                  <a href="#">
+                  <a target="_blank" rel="noopener noreferrer" href={link}>
                     <img className="img-fluid" src={image} alt={alt} />
                   </a>
                 </li>
@@ -37,8 +37,8 @@ const Footer = () => {
       </section>
       <section className="footer-body pt-4 pb-5">
         <div className="container">
-          <div className="row gy-5 gy-lg-0">
-            <aside className="col-12 col-sm-6 col-lg-3">
+          <div className="grid g-row-gap-3">
+            <aside className="g-col-12 g-col-sm-6 g-col-lg-3">
               <article className="second-menu">
                 <h5 className="mayus mb-4">sobre nosotros</h5>
                 <nav>
@@ -50,7 +50,7 @@ const Footer = () => {
                 </nav>
               </article>
             </aside>
-            <aside className="col-12 col-sm-6 col-lg-3">
+            <aside className="g-col-12 g-col-sm-6 g-col-lg-3">
               <article className="local-info">
                 <h5 className="mayus mb-4">encuéntranos</h5>
                 <ul>

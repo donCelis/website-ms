@@ -1,7 +1,14 @@
+@use "mixins" as *;
+
 .footer {
   background: var(--dark);
   color: var(--white);
   &-header {
+    @include mobile {
+      .d-flex {
+        flex-direction: column;
+      }
+    }
     .socials {
       display: flex;
       align-items: center;
@@ -10,6 +17,11 @@
         width: 35px;
         height: 35px;
         filter: invert(1);
+        transform: scale(1);
+        transition: transform ease 200ms;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

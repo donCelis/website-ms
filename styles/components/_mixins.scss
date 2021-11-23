@@ -1,0 +1,26 @@
+/* mixins responsive */
+@mixin mobile {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-sm {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin desktop-md {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin desktop-lg {
+  @media only screen and (max-width: 1440px) {
+    @content;
+  }
+}

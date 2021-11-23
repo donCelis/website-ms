@@ -11,8 +11,8 @@ const Item_slider = ({ title, name_btn, paragraph }) => {
     <>
       <section className="item-slider">
         <section className="container">
-          <div className="row">
-            <aside className="col-12 col-md-10 col-lg-6">
+          <div className="grid">
+            <aside className="g-col-12 g-col-md-10 g-col-lg-6">
               <article className="article">
                 <div className="line"></div>
                 <h2 className="article_title size-big">{title}</h2>

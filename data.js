@@ -110,22 +110,27 @@ const socials_links = [
   {
     image: "/images/socials-icons/facebook-circle.svg",
     alt: "facebook",
+    link: "https://www.facebook.com/",
   },
   {
     image: "/images/socials-icons/instagram-circle.svg",
     alt: "instagram",
+    link: "https://www.instagram.com/",
   },
   {
     image: "/images/socials-icons/linkedin-circle.svg",
     alt: "linkedin",
+    link: "https://www.linkedin.com/",
   },
   {
     image: "/images/socials-icons/twitter-circle.svg",
     alt: "twitter",
+    link: "https://www.twitter.com/",
   },
   {
     image: "/images/socials-icons/youtube-circle.svg",
     alt: "youtube",
+    link: "https://www.youtube.com/",
   },
 ];
 export {

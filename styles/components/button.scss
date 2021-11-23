@@ -1,3 +1,5 @@
+@use "./mixins" as *;
+
 .button {
   display: inline-flex;
   gap: 2rem;
@@ -29,6 +31,11 @@
     color: var(--tomato);
     &:hover {
       background: var(--white);
+    }
+  }
+  &-sm {
+    @include mobile {
+      gap: 1rem;
     }
   }
 }

@@ -1,13 +1,22 @@
+@use "mixins" as *;
+
 .menu {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  @include desktop-sm {
+    display: block;
+  }
   a {
     text-decoration: none;
     text-transform: capitalize;
     color: var(--dark);
     padding: 1.8rem 1rem;
     position: relative;
+    @include desktop-sm {
+      display: inline-block;
+      padding: 1rem;
+    }
     &::after {
       content: "";
       position: absolute;
