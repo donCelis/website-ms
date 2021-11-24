@@ -21,7 +21,7 @@ const Home = ({ data }) => {
         <Slider />
       </main>
       <Features />
-      <Services content={data.services} />
+      <Services />
       <Partners />
       <To_action />
     </Layout>
@@ -29,18 +29,3 @@ const Home = ({ data }) => {
 };
 
 export default Home;
-
-export const getStaticProps = async () => {
-  try {
-    const req = await fetch("http://localhost:3000/api/info");
-    const res = await req.json();
-
-    return {
-      props: {
-        data: res,
-      },
-    };
-  } catch (error) {
-    console.log(error);
-  }
-};

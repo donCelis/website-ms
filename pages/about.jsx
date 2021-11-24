@@ -5,7 +5,7 @@ import Contact from "@components/contact-form";
 
 import "@styles/about.scss";
 
-const About = ({ people }) => {
+const About = ({ data }) => {
   const data_head = {
     title: "Nosotros - Website - Ms",
     description: "Prueba realizada para Ilógica",
@@ -43,7 +43,7 @@ const About = ({ people }) => {
         </section>
       </section>
       <Description />
-      <People content={people} />
+      <People content={data.people} />
       <Contact />
     </Layout>
   );
@@ -51,19 +51,17 @@ const About = ({ people }) => {
 
 export default About;
 
-export const getStaticProps = async () => {
-  try {
-    const req = await fetch(
-      `https://619d28e8131c600017088db9.mockapi.io/api/ilogica/people`
-    );
-    const res = await req.json();
+export async function getStaticProps(context) {
+  const res = await fetch("http://localhost:3000/api/info");
+  const data = await res.json();
 
+  if (!data) {
     return {
-      props: {
-        people: res,
-      },
+      notFound: true,
     };
-  } catch (error) {
-    console.log(error);
   }
-};
+
+  return {
+    props: { data },
+  };
+}

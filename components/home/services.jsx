@@ -1,12 +1,12 @@
 import { data_services } from "data";
 
-const Item_service = ({ title, image, name_btn, mod = "" }) => {
+const Item_service = ({ title, image, name_btn, mod = "", color = "red" }) => {
   return (
     <aside className={"g-col-12 " + mod}>
       <article className="services-card">
         <img className="services-card-img" src={image} alt={title} />
         <h3 className="services-card-title">{title}</h3>
-        <button className="button button-red button-sm">
+        <button className={"button button-sm button-" + color}>
           {name_btn}
           <span>
             <img className="flecha" src="./images/flecha.svg" alt="Arrow" />
@@ -17,7 +17,7 @@ const Item_service = ({ title, image, name_btn, mod = "" }) => {
   );
 };
 
-const Services = ({ content = "" }) => {
+const Services = () => {
   const last_element = data_services.length - 1;
   return (
     <section className="services">
@@ -29,7 +29,7 @@ const Services = ({ content = "" }) => {
           </h3>
         </div>
         <section className="grid g-row-gap-3">
-          {content.map((props, id) => (
+          {data_services.map((props, id) => (
             <Item_service
               key={id}
               {...props}

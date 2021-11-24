@@ -24,6 +24,20 @@
       background: var(--tomato-hover);
     }
   }
+  &-green {
+    background: var(--dark-grey-blue);
+    color: var(--white);
+    &:hover {
+      background: var(--dusty-teal);
+    }
+  }
+  &-orange {
+    background: var(--tangerine);
+    color: var(--white);
+    &:hover {
+      background: var(--tangerine-hover);
+    }
+  }
   &-white {
     background: var(--white);
     color: var(--tomato);
@@ -47,7 +61,7 @@
   color: var(--dusty-teal);
   background: var(--white);
   border: 0;
-  padding: 0.6rem 3rem;
+  padding: 0.6rem 2rem;
   border-radius: 7px;
   border: 2px solid var(--bg-button-filter);
   transition: border ease-in-out 300ms, background ease-in-out 300ms;
