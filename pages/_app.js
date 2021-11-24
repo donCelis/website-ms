@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import Head from "next/head";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/scss/bootstrap-grid.scss";
+import "public/bootstrap/css/bootstrap.min.css";
 import "@styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    import("public/bootstrap/js/bootstrap.bundle.min.js");
   }, []);
   return (
     <>
