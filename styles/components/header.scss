@@ -4,6 +4,7 @@
   z-index: 10; */
   background: var(--white);
   border-bottom: 1px solid var(--white);
+  box-shadow: var(--box-shadow);
   .logo {
     &-dark {
       filter: invert(1);

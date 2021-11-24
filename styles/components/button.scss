@@ -37,3 +37,26 @@
     }
   }
 }
+.button-filter {
+  --bg-button-filter: rgba(85, 166, 172, 0.25);
+  color: var(--dusty-teal);
+  background: var(--white);
+  border: 0;
+  padding: 0.6rem 3rem;
+  border-radius: 7px;
+  border: 2px solid var(--bg-button-filter);
+  transition: border ease-in-out 300ms, background ease-in-out 300ms;
+  &.active {
+    border: 2px solid transparent;
+    background: var(--bg-button-filter);
+  }
+  &:hover {
+    background: var(--bg-button-filter);
+    border: 2px solid var(--bg-button-filter);
+  }
+  &-sm {
+    @include mobile {
+      padding: 0.6rem 1.6rem;
+    }
+  }
+}
