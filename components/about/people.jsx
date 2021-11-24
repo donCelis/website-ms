@@ -17,18 +17,20 @@ const People = ({ content }) => {
             <button className="button-filter button-filter-sm">amet</button>
           </li>
         </ul>
-        <section className="grid text-center">
+        <section className="grid g-row-gap-3 text-center">
           {content.map((person) => (
             <aside
               key={person.id}
-              className="g-col-12 g-col-sm-6 g-col-md-4 g-col-lg-3"
+              className="g-col-12 g-col-sm-6 g-col-md-6 g-col-lg-3"
             >
               <article className="card">
-                <img
-                  className="card-img-top img-fluid"
-                  src={person.avatar}
-                  alt={person.name}
-                />
+                <figure className="wrapper-img">
+                  <img
+                    className="img-fluid"
+                    src={person.avatar}
+                    alt={person.name}
+                  />
+                </figure>
                 <div className="card-body">
                   <p>{person.name}</p>
                   <small>{person.job}</small>

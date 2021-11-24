@@ -35,6 +35,11 @@
     @include mobile {
       gap: 1rem;
     }
+    @include mobile-sm {
+      gap: 0.5rem;
+      font-size: 0.8em;
+      padding: 0.7rem 1.2rem;
+    }
   }
 }
 .button-filter {
@@ -56,7 +61,10 @@
   }
   &-sm {
     @include mobile {
-      padding: 0.6rem 1.6rem;
+      padding: 0.5rem 1rem;
+    }
+    @include mobile-xs {
+      padding: 0.5rem 1rem;
     }
   }
 }

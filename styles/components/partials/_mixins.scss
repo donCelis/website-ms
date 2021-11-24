@@ -1,6 +1,11 @@
 /* mixins responsive */
 @mixin mobile-xs {
-  @media only screen and (max-width: 375px) {
+  @media only screen and (min-width: 320px) and (max-width: 359px) {
+    @content;
+  }
+}
+@mixin mobile-sm {
+  @media only screen and (max-width: 360px) {
     @content;
   }
 }

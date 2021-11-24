@@ -15,7 +15,11 @@ const Item_partners = ({ image, alt }) => {
 
 const Partners = () => {
   const breakpoints = {
-    375: {
+    320: {
+      spaceBetween: 30,
+      slidesPerView: 1,
+    },
+    360: {
       spaceBetween: 60,
       slidesPerView: 1,
     },

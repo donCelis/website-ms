@@ -26,7 +26,7 @@ const Features = () => {
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco
                 laboris nisi ut aliquip ex ea commodo consequat.
               </p>
-              <button className="button button-red">
+              <button className="button button-red button-sm">
                 Lorem
                 <span>
                   <img

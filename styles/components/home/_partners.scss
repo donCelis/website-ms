@@ -53,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: var(--br-10);
     text-align: center;
     background: var(--white);
     padding: 2rem 1rem;

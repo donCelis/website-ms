@@ -5,7 +5,7 @@ import "@styles/components/header.scss";
 
 const Header = () => {
   return (
-    <header className="header_site sticky-top">
+    <header className={`header_site "sticky-top`}>
       <nav className="navbar navbar-expand-lg">
         <section className="container">
           <h1 className="logo-dark navbar-brand">

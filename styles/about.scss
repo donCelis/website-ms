@@ -32,7 +32,7 @@
         width: 90%;
         height: 90%;
         background: transparent;
-        border-radius: 6px;
+        border-radius: var(--br-10);
         border: 2px solid var(--tangerine);
         z-index: 0;
         @include desktop-sm {
@@ -45,7 +45,7 @@
         }
       }
       img {
-        border-radius: 6px;
+        border-radius: var(--br-10);
         position: relative;
         z-index: 1;
       }
@@ -58,22 +58,40 @@
     }
     .category {
       padding: 3rem 0;
-      display: flex;
+      display: inline-grid;
       align-items: center;
       gap: 2rem;
+      grid-template-areas: "span span span";
       @include mobile {
         gap: 1rem;
         justify-content: center;
+        width: 100%;
+      }
+      @include mobile-xs {
+        gap: 0.5rem;
+        justify-content: center;
       }
     }
-    section.grid {
-      --bs-gap: 2rem;
-    }
     .card {
-      border-radius: 6px;
+      border-radius: var(--br-10);
       border: 0;
       box-shadow: var(--box-shadow);
       overflow: hidden;
+      @include mobile {
+        width: 70%;
+        margin: 0 auto;
+      }
+      .wrapper-img {
+        overflow: hidden;
+        img {
+          transform: scale(1);
+          transition: transform ease-in-out 500ms;
+          object-fit: cover;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
       p {
         margin: 0;
       }
