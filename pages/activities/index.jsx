@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import Header_page from "@components/header-page";
@@ -8,8 +7,10 @@ import "@styles/activities.scss";
 
 import { useFilter } from "hooks";
 
+import { capitalize_firstLetter, conver_date } from "tools";
+
 const Activities = ({ content }) => {
-  const { data, category, categories, setCategory } = useFilter(
+  const { data, category, categories, handleSetCategory } = useFilter(
     content,
     "travels"
   );
@@ -17,10 +18,6 @@ const Activities = ({ content }) => {
     title: "Actividades - Website - Ms",
     description: "Prueba realizada para Ilógica",
   };
-  const capitalizeFirstLetter = (string) =>
-    string.charAt(0).toUpperCase() + string.slice(1);
-
-  const conver_date = (date) => new Date(date).toDateString();
 
   return (
     <Layout {...data_head}>
@@ -35,7 +32,7 @@ const Activities = ({ content }) => {
               categories.map((name, id) => (
                 <li key={id} className="category-item">
                   <button
-                    onClick={() => setCategory(name)}
+                    onClick={() => handleSetCategory(name)}
                     className={`button-filter button-filter-sm ${
                       name === category ? "active" : ""
                     }`}
@@ -62,7 +59,7 @@ const Activities = ({ content }) => {
                     </small>
                     <div className="card-body card-body-md">
                       <strong className="card-title">
-                        {capitalizeFirstLetter(title)}
+                        {capitalize_firstLetter(title)}
                       </strong>
                       <p>{short_description}</p>
                       <Link href={`/activities/single-activity`}>

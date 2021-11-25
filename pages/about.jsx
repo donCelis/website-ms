@@ -51,7 +51,6 @@ const About = ({ data }) => {
 export default About;
 
 export async function getStaticProps(context) {
-  //const res = await fetch("http://localhost:3000/api/info");
   const res = await fetch(
     "https://619d28e8131c600017088db9.mockapi.io/api/ilogica/data"
   );

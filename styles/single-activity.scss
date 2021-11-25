@@ -1,7 +1,94 @@
-.single-activity {
-  padding: 4rem 0 6rem;
-}
+@use "./components/partials/" as *;
+@import "./components/filter-category.scss";
+@import "./components/card.scss";
+@import "./components/home/slider";
+@import "./components/home/partners";
 
+.single-activity-post {
+  @include tablet {
+    padding: 0 1rem;
+    .grid {
+      align-items: center;
+    }
+  }
+  .share-post {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include tablet {
+      padding: 0;
+    }
+    @include mobile {
+      display: none;
+    }
+    h6 {
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 1rem;
+      a {
+        color: var(--tomato);
+        margin: 0;
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  .post {
+    color: var(--dark);
+    margin-top: -10rem;
+    @include tablet {
+      margin-top: 0;
+    }
+    &-header {
+      color: var(--white);
+      @include tablet {
+        color: var(--dark);
+      }
+      small {
+        color: var(--gray);
+        margin-top: 1rem;
+      }
+    }
+    &-body {
+      padding: 2rem 0;
+      width: 70%;
+      @include tablet {
+        width: 100%;
+      }
+      .quote {
+        margin: 3rem 0;
+        background: var(--white);
+        box-shadow: var(--box-shadow);
+        padding: 3rem 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        .quote-left {
+          position: absolute;
+          left: 1rem;
+          top: -1rem;
+        }
+        .quote-right {
+          position: absolute;
+          right: 1rem;
+          bottom: -1rem;
+        }
+        q {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+.activities-comp {
+  padding: 4rem 0;
+  background: var(--white-light);
+}
 .back-to {
   display: inline-flex;
   align-items: center;

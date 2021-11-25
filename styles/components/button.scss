@@ -89,3 +89,30 @@
     }
   }
 }
+.link-post {
+  color: var(--tomato);
+  text-decoration: none;
+  font-size: 1.1em;
+  display: inline-block;
+  cursor: pointer;
+  @include mobile {
+    display: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: var(--tomato);
+  }
+  &:hover figure {
+    transform: translateX(0.5rem);
+  }
+  figure {
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    transform: translateX(0);
+    transition: transform ease-in-out 200ms;
+    img {
+      transform: scale(0.6);
+    }
+  }
+}
