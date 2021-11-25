@@ -7,7 +7,7 @@ import "@styles/page-404.scss";
 
 const Page_404 = () => {
   const data_head = {
-    title: "Págia no encontrada - Website - Ms",
+    title: "Página no encontrada - Website - Ms",
     description: "Prueba realizada para Ilógica",
   };
   return (
@@ -29,9 +29,9 @@ const Page_404 = () => {
             {menu_links.map(({ name, path }, key) => (
               <li key={key}>
                 <Link href={path}>
-                  <button className={`button button-red button-lg`}>
+                  <a className={`button button-red button-lg`}>
                     {name}
-                  </button>
+                  </a>
                 </Link>
               </li>
             ))}

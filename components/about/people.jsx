@@ -7,8 +7,11 @@ const People = ({ content }) => {
   const [category, setCategory] = useState("web-dev");
 
   useEffect(() => {
-    setCategories(Object.keys(people));
-    categories.length === 0 && setCategory("web-dev");
+    const setData = () => (
+      setCategories(Object.keys(people)),
+      categories.length === 0 && setCategory("web-dev")
+    );
+    setData();
   }, []);
 
   return (

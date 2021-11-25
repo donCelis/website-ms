@@ -18,9 +18,10 @@
   }
   /* Mod */
   &-red {
-    background: var(--tomato);
     color: var(--white);
+    background: var(--tomato);
     &:hover {
+      color: var(--white);
       background: var(--tomato-hover);
     }
   }
@@ -28,6 +29,7 @@
     background: var(--dark-grey-blue);
     color: var(--white);
     &:hover {
+      color: var(--white);
       background: var(--dusty-teal);
     }
   }
@@ -35,6 +37,7 @@
     background: var(--tangerine);
     color: var(--white);
     &:hover {
+      color: var(--white);
       background: var(--tangerine-hover);
     }
   }
@@ -42,6 +45,7 @@
     background: var(--white);
     color: var(--tomato);
     &:hover {
+      color: var(--tomato);
       background: var(--white);
     }
   }

@@ -13,8 +13,11 @@ const Activities = ({ data }) => {
   const [category, setCategory] = useState("travels");
 
   useEffect(() => {
-    setCategories(Object.keys(activities));
-    categories.length === 0 && setCategory("travels");
+    const setData = () => (
+      setCategories(Object.keys(activities)),
+      categories.length === 0 && setCategory("travels")
+    );
+    setData();
   }, []);
 
   const data_head = {

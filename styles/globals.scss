@@ -40,19 +40,27 @@ h1 {
   height: 0.2rem;
   background: var(--tangerine);
 }
+a {
+  color: var(--dark);
+  text-decoration: none;
+  &:hover {
+    color: var(--dark);
+  }
+}
 ul,
 ol {
   padding-inline-start: 0;
   list-style: none;
   margin: 0;
 }
+figure {
+  margin: 0;
+}
+/* modify gaps */
 @include tablet {
   .g-gap-0 {
     gap: 0;
   }
-}
-figure {
-  margin: 0;
 }
 @include mobile {
   .g-row-gap-2 {
