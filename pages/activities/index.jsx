@@ -91,9 +91,11 @@ export default Activities;
 
 export async function getStaticProps(context) {
   try {
-    const res = await fetch("http://localhost:3000/api/info");
+    const res = await fetch(
+      "https://619d28e8131c600017088db9.mockapi.io/api/ilogica/data"
+    );
     const data = await res.json();
-    const data_activities = data.activities;
+    const data_activities = data[0].activities;
 
     if (!data_activities) {
       return {
