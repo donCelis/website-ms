@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { data_partners } from "data";
+import { partners } from "data";
 
 const Item_partners = ({ image, alt }) => {
   return (
@@ -56,7 +56,7 @@ const Partners = () => {
           wrapperTag="ul"
           className="swiper-partners"
         >
-          {data_partners.map((item, id) => (
+          {partners.map((item, id) => (
             <SwiperSlide tag="li" key={id}>
               <Item_partners {...item} />
             </SwiperSlide>

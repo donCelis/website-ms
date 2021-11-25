@@ -1,8 +1,9 @@
 @use "./components/partials" as *;
 
+/* Variables */
 :root {
   --tangerine: hsl(32, 100%, 50%);
-  --tangerine-hover:rgb(230, 126, 34);
+  --tangerine-hover: rgb(230, 126, 34);
   --dark: hsl(251, 41%, 13%);
   --dusty-blue: hsl(184, 34%, 50%);
   --dusty-teal: hsl(181, 36%, 36%);
@@ -21,7 +22,7 @@
   --box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
   --br-10: 10px;
 }
-
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
@@ -61,3 +62,6 @@ figure {
     row-gap: 3rem;
   }
 }
+
+/* goblal components */
+@import "./components/button.scss";

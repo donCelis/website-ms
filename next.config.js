@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["fakestoreapi.com", "mockapi.io"],
+    domains: ["fakestoreapi.com", "mockapi.io", "placeimg.com"],
   },
   webpack(config) {
     config.module.rules[2].oneOf.forEach((one) => {

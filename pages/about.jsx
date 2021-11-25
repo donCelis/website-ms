@@ -1,4 +1,5 @@
 import Layout from "@components/layout";
+import Header_page from "@components/header-page";
 import Description from "@components/about/description";
 import People from "@components/about/people";
 import Contact from "@components/contact-form";
@@ -12,11 +13,7 @@ const About = ({ data }) => {
   };
   return (
     <Layout {...data_head}>
-      <section className="header-page">
-        <div className="container">
-          <h2>Nosotros</h2>
-        </div>
-      </section>
+      <Header_page title="Nosotros" />
       <section className="paragraphs">
         <section className="container py-5">
           <div className="grid">
@@ -43,7 +40,7 @@ const About = ({ data }) => {
         </section>
       </section>
       <Description />
-      <People content={data.people} />
+      <People content={data} />
       <Contact />
     </Layout>
   );
@@ -54,6 +51,7 @@ export default About;
 export async function getStaticProps(context) {
   const res = await fetch("http://localhost:3000/api/info");
   const data = await res.json();
+  const data_people = data.people;
 
   if (!data) {
     return {
@@ -62,6 +60,6 @@ export async function getStaticProps(context) {
   }
 
   return {
-    props: { data },
+    props: { data: data_people },
   };
 }

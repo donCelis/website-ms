@@ -1,54 +1,97 @@
-import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next/link";
+import { useEffect, useState } from "react";
+
+import Header_page from "@components/header-page";
 import Layout from "@components/layout";
 
-const Activities = ({ posts }) => {
+import "@styles/activities.scss";
+
+const Activities = ({ data }) => {
+  const [activities, setActivities] = useState(data);
+
+  const [categories, setCategories] = useState("");
+  const [category, setCategory] = useState("travels");
+
+  useEffect(() => {
+    setCategories(Object.keys(activities));
+    categories.length === 0 && setCategory("travels");
+  }, []);
+
   const data_head = {
     title: "Actividades - Website - Ms",
     description: "Prueba realizada para Ilógica",
   };
   return (
     <Layout {...data_head}>
-      <section className="row">
-        {posts.map(({ id, title, image, description }) => (
-          <div className="col-4" key={id}>
-            <article className="card">
-              <Image
-                className="card-img-top"
-                src={image}
-                width={300}
-                height={300}
-                alt={title}
-                layout="fixed"
-              />
-              <section className="card-body">
-                <p className="card-title">{title}</p>
-                <p className="card-text">{description}</p>
-                <Link href={`/activities/${id}`}>
-                  <a className="btn btn-primary">Leer más</a>
-                </Link>
-              </section>
-            </article>
-          </div>
-        ))}
+      <Header_page title="Actividades" />
+      <section className="activities">
+        <div className="container">
+          <h6>CATEGORÍAS</h6>
+          <ul className="category">
+            {categories.length > 0 &&
+              categories.map((name, id) => (
+                <li key={id} className="category-item">
+                  <button
+                    onClick={() => setCategory(name)}
+                    className={`button-filter button-filter-sm ${
+                      name === category ? "active" : ""
+                    }`}
+                  >
+                    {name}
+                  </button>
+                </li>
+              ))}
+          </ul>
+          <section className="grid g-row-gap-3">
+            {activities[category].map(
+              ({ id, image, title, date, short_description }) => {
+                const new_date = new Date(date);
+                const convert_date = new_date.toDateString();
+                return (
+                  <aside
+                    key={id}
+                    className="g-col-12 g-col-sm-6 g-col-md-6 g-col-lg-4"
+                  >
+                    <article className="card">
+                      <figure className="wrapper-img">
+                        <img className="img-fluid" src={image} alt={title} />
+                      </figure>
+                      <div className="card-body">
+                        <small>{convert_date}</small>
+                        <p>{title}</p>
+                        <p>{short_description}</p>
+                      </div>
+                    </article>
+                  </aside>
+                );
+              }
+            )}
+          </section>
+        </div>
       </section>
+      <section className="icon-form"></section>
     </Layout>
   );
 };
 
 export default Activities;
 
-export const getStaticProps = async () => {
+export async function getStaticProps(context) {
   try {
-    const req = await fetch(`https://fakestoreapi.com/products`);
-    const res = await req.json();
+    const res = await fetch("http://localhost:3000/api/info");
+    const data = await res.json();
+    const data_activities = data.activities;
+
+    if (!data_activities) {
+      return {
+        notFound: true,
+      };
+    }
 
     return {
-      props: {
-        posts: res,
-      },
+      props: { data: data_activities },
     };
   } catch (error) {
     console.log(error);
   }
-};
+}

@@ -1,22 +1,24 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import {
-  data_slider,
-  data_features,
-  data_services,
-  data_partners,
+  slider,
+  features,
+  services,
+  partners,
   menu_links,
   socials_links,
-  data_people,
+  people,
+  activities,
 } from "../../data";
 
 const all_data = {
-  slider: data_slider,
-  features: data_features,
-  services: data_services,
-  partners: data_partners,
+  slider,
+  features,
+  services,
+  partners,
   menu_links,
   socials_links,
-  people: data_people,
+  people,
+  activities,
 };
 
 export default function handler(req, res) {

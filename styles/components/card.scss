@@ -1,0 +1,29 @@
+@use "./partials/" as *;
+
+.card {
+  border-radius: var(--br-10);
+  border: 0;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  @include mobile {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .wrapper-img {
+    overflow: hidden;
+    img {
+      transform: scale(1);
+      transition: transform ease-in-out 500ms;
+      object-fit: cover;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  p {
+    margin: 0;
+  }
+  small {
+    color: var(--gray);
+  }
+}

@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "@components/layout";
 
-const Activity = ({ post }) => {
-  const { id, title, description, image } = post;
+const Activity = ({ data }) => {
+  console.log(data);
   const data_head = {
     title,
     description,
@@ -11,7 +11,7 @@ const Activity = ({ post }) => {
 
   return (
     <Layout {...data_head}>
-      <div>
+      {/* <div>
         <h3>
           {id} - {title}
         </h3>
@@ -20,7 +20,7 @@ const Activity = ({ post }) => {
       </div>
       <Link href="/activities">
         <a>Go to activities</a>
-      </Link>
+      </Link> */}
     </Layout>
   );
 };
@@ -28,9 +28,13 @@ export default Activity;
 
 export const getStaticPaths = async () => {
   try {
-    const req = await fetch("https://fakestoreapi.com/products");
+    const req = await fetch("http://localhost:3000/api/info");
     const res = await req.json();
-    const paths = res.map(({ id }) => ({ params: { id: `${id}` } }));
+    const data_activities = await res.activities.travels;
+
+    const paths = data_activities.map(({ id }) => ({
+      params: { id: `${id}` },
+    }));
 
     return {
       paths,
@@ -41,17 +45,29 @@ export const getStaticPaths = async () => {
   }
 };
 
-export const getStaticProps = async ({ params }) => {
+export async function getStaticProps({ params }) {
   try {
-    const req = await fetch(`https://fakestoreapi.com/products/${params.id}`);
-    const res = await req.json();
+    const res = await fetch(`
+    http://localhost:3000/api/info/${params.id}`);
+    const data = await res.json();
+    const data_activities = data.activities.traverls;
+
+    if (!data_activities) {
+      return {
+        notFound: true,
+      };
+    }
 
     return {
-      props: {
-        post: res,
-      },
+      props: { data: data_activities },
     };
   } catch (error) {
     console.log(error);
+    return {
+      redirect: {
+        destination: "/",
+        statusCode: 307,
+      },
+    };
   }
-};
+}

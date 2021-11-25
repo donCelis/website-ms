@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 const People = ({ content }) => {
   const [people, setPeople] = useState(content);
   const [categories, setCategories] = useState("");
-  const [category, setCategory] = useState("dev-ops");
+  const [category, setCategory] = useState("web-dev");
 
   useEffect(() => {
     setCategories(Object.keys(people));
-    categories.length === 0 && setCategory("dev-ops");
+    categories.length === 0 && setCategory("web-dev");
   }, []);
 
   return (

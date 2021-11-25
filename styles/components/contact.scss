@@ -68,6 +68,7 @@
       border-bottom: 1px solid #a8a8a8;
       padding: 1rem 0;
       transition: border ease-in-out 200ms;
+      border-radius: 0;
       &:focus {
         border-bottom: 1px solid var(--tomato);
       }

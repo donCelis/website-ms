@@ -1,4 +1,4 @@
-import { data_services } from "data";
+import { services } from "data";
 
 const Item_service = ({ title, image, name_btn, mod = "", color = "red" }) => {
   return (
@@ -18,7 +18,7 @@ const Item_service = ({ title, image, name_btn, mod = "", color = "red" }) => {
 };
 
 const Services = () => {
-  const last_element = data_services.length - 1;
+  const last_element = services.length - 1;
   return (
     <section className="services">
       <div className="container">
@@ -29,7 +29,7 @@ const Services = () => {
           </h3>
         </div>
         <section className="grid g-row-gap-3">
-          {data_services.map((props, id) => (
+          {services.map((props, id) => (
             <Item_service
               key={id}
               {...props}

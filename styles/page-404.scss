@@ -1,0 +1,21 @@
+@use "./components/partials/" as *;
+@import "./components/filter-category.scss";
+
+.page-404 {
+  padding: 8rem 0 6rem;
+  @include mobile {
+    padding: 5rem 0;
+    &-image {
+      width: 100%;
+    }
+    .category {
+      grid-template-areas: "span";
+    }
+  }
+  h2 {
+    margin: 2rem 0;
+  }
+  button {
+    text-transform: capitalize;
+  }
+}

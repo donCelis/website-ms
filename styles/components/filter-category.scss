@@ -1,0 +1,24 @@
+@use "./partials/" as *;
+
+.category {
+  padding: 3rem 0;
+  display: inline-grid;
+  align-items: center;
+  gap: 2rem;
+  grid-template-areas: "span span span";
+  &-pa-0 {
+    padding: 0;
+  }
+  &-pa-1 {
+    padding: 1rem 0;
+  }
+  @include mobile {
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+  @include mobile-xs {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+}

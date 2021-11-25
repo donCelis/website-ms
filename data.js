@@ -13,7 +13,7 @@ const menu_links = [
   },
 ];
 
-const data_slider = [
+const slider = [
   {
     image: "/images/sliders/slider-1.jpg",
     title: `Lorem ipsum dolor sit amet 1`,
@@ -37,7 +37,7 @@ const data_slider = [
   },
 ];
 
-const data_features = [
+const features = [
   {
     title: "Lorem, ipsum dolor.",
     image: "/images/features/80-300x300.jpg",
@@ -52,7 +52,7 @@ const data_features = [
   },
 ];
 
-const data_services = [
+const services = [
   {
     title: "Lorem ipsum",
     image: "/images/icons/loves.svg",
@@ -72,7 +72,7 @@ const data_services = [
     color: "orange",
   },
 ];
-const data_partners = [
+const partners = [
   {
     image: "/images/partners/juegging.png",
     alt: "Lorem ipsum",
@@ -134,7 +134,7 @@ const socials_links = [
   },
 ];
 
-const data_people = {
+const people = {
   "web-dev": [
     {
       name: "Roberta Rempel",
@@ -311,12 +311,219 @@ const data_people = {
   ],
 };
 
+const activities = {
+  travels: [
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-07-12T00:38:20.102Z",
+      title: "deserunt necessitatibus exercitationem",
+      short_description:
+        "Praesentium numquam recusandae dolorum unde sit sit corrupti impedit quas.",
+      id: "1",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-09-30T23:26:33.553Z",
+      title: "nemo quibusdam vitae",
+      short_description: "Excepturi voluptates rerum.",
+      id: "2",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-07-08T06:18:20.776Z",
+      title: "dolorum quibusdam veritatis",
+      short_description: "Quo ex voluptatibus odio ea distinctio aut.",
+      id: "3",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2020-11-28T04:06:00.571Z",
+      title: "quidem excepturi asperiores",
+      short_description: "Nostrum aut sapiente quia fugit sit rem.",
+      id: "4",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-03-22T03:05:53.663Z",
+      title: "est et molestias",
+      short_description: "Quis cumque rerum qui.",
+      id: "5",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-02-11T11:27:57.302Z",
+      title: "magni assumenda eaque",
+      short_description: "Occaecati nesciunt quam eum.",
+      id: "6",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-08-22T22:52:03.625Z",
+      title: "sunt voluptatem et",
+      short_description: "Adipisci cumque est iusto delectus.",
+      id: "7",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-06-09T20:35:41.998Z",
+      title: "molestiae rerum mollitia",
+      short_description: "Odio eius ab quia non.",
+      id: "8",
+    },
+    {
+      image: "https://placeimg.com/640/480/arch",
+      date: "2021-08-31T10:05:16.838Z",
+      title: "commodi tenetur eaque",
+      short_description:
+        "Labore aspernatur similique dolor temporibus magni nesciunt.",
+      id: "9",
+    },
+  ],
+  hobbies: [
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-09-15T16:48:25.190Z",
+      title: "voluptatum sint maxime",
+      short_description:
+        "Temporibus sed earum iste eveniet in ea inventore animi tenetur.",
+      id: "1",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-03-15T19:38:03.062Z",
+      title: "et voluptatem deleniti",
+      short_description:
+        "Ut voluptatum consequuntur distinctio accusantium sed iusto.",
+      id: "2",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-01-15T20:35:30.715Z",
+      title: "quidem ipsum architecto",
+      short_description: "Et enim non.",
+      id: "3",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-04-13T02:33:35.754Z",
+      title: "magni ratione et",
+      short_description: "Velit corrupti dolorem dolore quaerat culpa cumque.",
+      id: "4",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-08-09T17:10:31.762Z",
+      title: "est consequatur aspernatur",
+      short_description:
+        "Hic occaecati sed explicabo officia aperiam est aliquam porro a.",
+      id: "5",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-08-02T05:45:54.650Z",
+      title: "perferendis qui et",
+      short_description: "Enim deleniti est saepe quae eum autem et.",
+      id: "6",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-07-29T19:50:36.450Z",
+      title: "qui sunt recusandae",
+      short_description: "Aut culpa sapiente unde assumenda molestias.",
+      id: "7",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-02-27T07:58:42.888Z",
+      title: "esse ut quo",
+      short_description: "Est officiis odit tenetur ullam modi neque sunt.",
+      id: "8",
+    },
+    {
+      image: "https://placeimg.com/640/480/tech",
+      date: "2021-09-03T15:11:38.004Z",
+      title: "numquam sed qui",
+      short_description: "Et rerum et.",
+      id: "9",
+    },
+  ],
+  sports: [
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-05-01T22:57:29.286Z",
+      title: "natus dolor odio",
+      short_description: "Aspernatur sapiente suscipit aut.",
+      id: "1",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-01-12T09:47:00.160Z",
+      title: "asperiores itaque est",
+      short_description: "Qui praesentium accusantium similique aperiam.",
+      id: "2",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2020-12-27T00:55:55.518Z",
+      title: "aut possimus voluptates",
+      short_description:
+        "Quod nisi occaecati tempore repudiandae delectus eligendi recusandae et dolores.",
+      id: "3",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-05-11T10:19:26.249Z",
+      title: "debitis mollitia sed",
+      short_description: "Qui vel culpa voluptate.",
+      id: "4",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-06-21T06:43:17.670Z",
+      title: "dolore qui quo",
+      short_description:
+        "Rerum facilis placeat suscipit sed voluptatem pariatur provident.",
+      id: "5",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-10-16T10:16:25.567Z",
+      title: "non maiores et",
+      short_description: "Ratione vitae harum sed.",
+      id: "6",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-08-12T23:42:24.007Z",
+      title: "ut et officia",
+      short_description: "Fugit earum ut iste consectetur incidunt velit.",
+      id: "7",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-06-13T21:43:58.122Z",
+      title: "minus perspiciatis maiores",
+      short_description:
+        "Sit mollitia a modi et enim esse explicabo ea corporis.",
+      id: "8",
+    },
+    {
+      image: "https://placeimg.com/640/480/animals",
+      date: "2021-11-02T03:18:44.918Z",
+      title: "omnis maiores mollitia",
+      short_description: "Ut dolorem animi laudantium aut saepe.",
+      id: "9",
+    },
+  ],
+};
+
 export {
-  data_slider,
-  data_features,
-  data_services,
-  data_partners,
+  slider,
+  features,
+  services,
+  partners,
   menu_links,
   socials_links,
-  data_people,
+  people,
+  activities,
 };

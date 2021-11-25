@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { data_slider } from "data";
+import { slider } from "data";
 
 const Item_slider = ({ title, name_btn, paragraph }) => {
   return (
@@ -47,7 +47,7 @@ const Slider = () => {
       wrapperTag="ul"
       className="swiper-slider-home"
     >
-      {data_slider.map((item, index) => (
+      {slider.map((item, index) => (
         <SwiperSlide
           tag="li"
           style={{ backgroundImage: `url(${item.image})` }}
