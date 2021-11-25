@@ -13,7 +13,9 @@ const About = ({ data }) => {
   };
   return (
     <Layout {...data_head}>
-      <Header_page title="Nosotros" />
+      <Header_page>
+        <h2>Nosotros</h2>
+      </Header_page>
       <section className="paragraphs">
         <section className="container py-5">
           <div className="grid">

@@ -1,0 +1,17 @@
+.single-activity {
+  padding: 4rem 0 6rem;
+}
+
+.back-to {
+  display: inline-flex;
+  align-items: center;
+  color: var(--white);
+  &:hover {
+    color: var(--white);
+  }
+  figure {
+    display: inline-flex;
+    margin-right: 0.5rem;
+    width: 20px;
+  }
+}

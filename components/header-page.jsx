@@ -1,11 +1,9 @@
 import "@styles/components/header-page.scss";
 
-const Header_page = ({ title = "Page" }) => {
+const Header_page = ({ children }) => {
   return (
     <section className="header-page">
-      <div className="container">
-        <h2>{title}</h2>
-      </div>
+      <div className="container">{children}</div>
     </section>
   );
 };

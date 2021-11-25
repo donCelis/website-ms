@@ -1,18 +1,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useFilter } from "hooks";
 
 const People = ({ content }) => {
-  const [people, setPeople] = useState(content);
-  const [categories, setCategories] = useState("");
-  const [category, setCategory] = useState("web-dev");
-
-  useEffect(() => {
-    const setData = () => (
-      setCategories(Object.keys(people)),
-      categories.length === 0 && setCategory("web-dev")
-    );
-    setData();
-  }, []);
+  const { data, category, categories, setCategory } = useFilter(
+    content,
+    "web-dev"
+  );
 
   return (
     <section className="about-people">
@@ -35,7 +29,7 @@ const People = ({ content }) => {
             ))}
         </ul>
         <section className="grid g-row-gap-3 text-center">
-          {people[category].map((person) => (
+          {data[category].map((person) => (
             <aside
               key={person.id}
               className="g-col-12 g-col-sm-6 g-col-md-6 g-col-lg-3"

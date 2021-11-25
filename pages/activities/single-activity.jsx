@@ -1,23 +1,26 @@
+import Link from "next/link";
+import Header_page from "@components/header-page";
 import Layout from "@components/layout";
 
-const Single_activity = ({ data }) => {
+import "@styles/single-activity.scss";
+
+const Single_activity = () => {
   const data_head = {
     title: "Single page",
   };
 
   return (
     <Layout {...data_head}>
-      <h1>Single</h1>
-      {/* <div>
-        <h3>
-          {id} - {title}
-        </h3>
-        <Image src={image} width={200} height={200} alt={title} />
-        <p>{description}</p>
-      </div>
-      <Link href="/activities">
-        <a>Go to activities</a>
-      </Link> */}
+      <Header_page>
+        <Link href="/activities">
+          <a className="back-to">
+            <figure>
+              <img src="/images/small-arrow-left.svg" alt="small-arrow-left" />
+            </figure>
+            Volver a Actividades
+          </a>
+        </Link>
+      </Header_page>
     </Layout>
   );
 };

@@ -6,20 +6,13 @@ import Layout from "@components/layout";
 
 import "@styles/activities.scss";
 
-const Activities = ({ data }) => {
-  const [activities, setActivities] = useState(data);
+import { useFilter } from "hooks";
 
-  const [categories, setCategories] = useState("");
-  const [category, setCategory] = useState("travels");
-
-  useEffect(() => {
-    const setData = () => (
-      setCategories(Object.keys(activities)),
-      categories.length === 0 && setCategory("travels")
-    );
-    setData();
-  }, []);
-
+const Activities = ({ content }) => {
+  const { data, category, categories, setCategory } = useFilter(
+    content,
+    "travels"
+  );
   const data_head = {
     title: "Actividades - Website - Ms",
     description: "Prueba realizada para Ilógica",
@@ -31,7 +24,9 @@ const Activities = ({ data }) => {
 
   return (
     <Layout {...data_head}>
-      <Header_page title="Actividades" />
+      <Header_page>
+        <h2>Actividades</h2>
+      </Header_page>
       <section className="activities">
         <div className="container">
           <h6>CATEGORÍAS</h6>
@@ -51,7 +46,7 @@ const Activities = ({ data }) => {
               ))}
           </ul>
           <section className="grid g-row-gap-3">
-            {activities[category].map(
+            {data[category].map(
               ({ id, image, title, date, short_description }) => (
                 <aside
                   key={id}
@@ -65,12 +60,12 @@ const Activities = ({ data }) => {
                       <time dateTime={date}>{conver_date(date)}</time> -{" "}
                       {category}
                     </small>
-                    <div className="card-body">
+                    <div className="card-body card-body-md">
                       <strong className="card-title">
                         {capitalizeFirstLetter(title)}
                       </strong>
                       <p>{short_description}</p>
-                      <Link href={`/activities/${id}`}>
+                      <Link href={`/activities/single-activity`}>
                         <a className="card-link">
                           Leer más
                           <figure>
@@ -107,7 +102,7 @@ export async function getStaticProps(context) {
     }
 
     return {
-      props: { data: data_activities },
+      props: { content: data_activities },
     };
   } catch (error) {
     console.log(error);

@@ -1,8 +1,11 @@
+import { useRouter } from "next/router";
 import Layout from "@components/layout";
 
 const Activity = ({ data }) => {
+  console.log(data);
+
   const data_head = {
-    title:"Single page",
+    title: "Single page Id",
   };
 
   return (
@@ -25,9 +28,11 @@ export default Activity;
 
 /* export const getStaticPaths = async () => {
   try {
-    const req = await fetch("http://localhost:3000/api/info");
+    const req = await fetch(
+      "https://619d28e8131c600017088db9.mockapi.io/api/ilogica/activities"
+    );
     const res = await req.json();
-    const data_activities = await res.activities.travels;
+    const data_activities = await res[0].travels;
 
     const paths = data_activities.map(({ id }) => ({
       params: { id: `${id}` },
@@ -40,14 +45,14 @@ export default Activity;
   } catch (error) {
     console.log(error);
   }
-};
+}; */
 
-export async function getStaticProps({ params }) {
+/* export async function getStaticProps({ params }) {
   try {
     const res = await fetch(`
-    http://localhost:3000/api/info/${params.id}`);
+    https://619d28e8131c600017088db9.mockapi.io/api/ilogica/activities/${params.id}/activity`);
     const data = await res.json();
-    const data_activities = await data.activities;
+    const data_activities = await data[0];
 
     if (!data_activities) {
       return {
@@ -56,10 +61,9 @@ export async function getStaticProps({ params }) {
     }
 
     return {
-      props: { data },
+      props: { data: data_activities },
     };
   } catch (error) {
     console.log(error);
   }
-}
- */
+} */
