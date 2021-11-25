@@ -1,5 +1,5 @@
-import { Link } from "next/link";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 import Header_page from "@components/header-page";
 import Layout from "@components/layout";
@@ -21,6 +21,11 @@ const Activities = ({ data }) => {
     title: "Actividades - Website - Ms",
     description: "Prueba realizada para Ilógica",
   };
+  const capitalizeFirstLetter = (string) =>
+    string.charAt(0).toUpperCase() + string.slice(1);
+
+  const conver_date = (date) => new Date(date).toDateString();
+
   return (
     <Layout {...data_head}>
       <Header_page title="Actividades" />
@@ -44,39 +49,47 @@ const Activities = ({ data }) => {
           </ul>
           <section className="grid g-row-gap-3">
             {activities[category].map(
-              ({ id, image, title, date, short_description }) => {
-                const new_date = new Date(date);
-                const convert_date = new_date.toDateString();
-                return (
-                  <aside
-                    key={id}
-                    className="g-col-12 g-col-sm-6 g-col-md-6 g-col-lg-4"
-                  >
-                    <article className="card">
-                      <figure className="wrapper-img">
-                        <img className="img-fluid" src={image} alt={title} />
-                      </figure>
-                      <div className="card-body">
-                        <small>{convert_date}</small>
-                        <p>{title}</p>
-                        <p>{short_description}</p>
-                      </div>
-                    </article>
-                  </aside>
-                );
-              }
+              ({ id, image, title, date, short_description }) => (
+                <aside
+                  key={id}
+                  className="g-col-12 g-col-sm-6 g-col-md-6 g-col-lg-4"
+                >
+                  <article className="card">
+                    <figure className="wrapper-img">
+                      <img className="img-fluid" src={image} alt={title} />
+                    </figure>
+                    <small className="card-border">
+                      <time dateTime={date}>{conver_date(date)}</time> -{" "}
+                      {category}
+                    </small>
+                    <div className="card-body">
+                      <strong className="card-title">
+                        {capitalizeFirstLetter(title)}
+                      </strong>
+                      <p>{short_description}</p>
+                      <Link href={`/activities/${id}`}>
+                        <a className="card-link">
+                          Leer más
+                          <figure>
+                            <img src="/images/path.svg" alt="arrow right" />
+                          </figure>
+                        </a>
+                      </Link>
+                    </div>
+                  </article>
+                </aside>
+              )
             )}
           </section>
         </div>
       </section>
-      <section className="icon-form"></section>
     </Layout>
   );
 };
 
 export default Activities;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   try {
     const res = await fetch("http://localhost:3000/api/info");
     const data = await res.json();

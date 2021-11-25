@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const People = ({ content }) => {
   const [people, setPeople] = useState(content);

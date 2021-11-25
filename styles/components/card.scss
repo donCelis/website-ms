@@ -20,10 +20,51 @@
       }
     }
   }
-  p {
-    margin: 0;
-  }
-  small {
+  &-border {
+    padding: 0.6rem 1.5rem;
+    display: block;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
     color: var(--gray);
+  }
+  &-body {
+    padding: 1.5rem;
+    p {
+      margin: 0;
+      margin: 0.5rem 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow-y: hidden;
+    }
+  }
+  &-title {
+    font-size: 1.25em;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &-link {
+    color: var(--tomato);
+    text-decoration: none;
+    font-size: 1.1em;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      color: var(--tomato);
+    }
+    &:hover figure {
+      transform: translateX(0.5rem);
+    }
+    figure {
+      display: inline-block;
+      width: 20px;
+      height: 30px;
+      transform: translateX(0);
+      transition: transform ease-in-out 200ms;
+      img {
+        transform: scale(0.6);
+      }
+    }
   }
 }

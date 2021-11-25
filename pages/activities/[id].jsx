@@ -1,16 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
 import Layout from "@components/layout";
 
 const Activity = ({ data }) => {
-  console.log(data);
   const data_head = {
-    title,
-    description,
+    title:"Single page",
   };
 
   return (
     <Layout {...data_head}>
+      <h1>test</h1>
       {/* <div>
         <h3>
           {id} - {title}
@@ -26,7 +23,7 @@ const Activity = ({ data }) => {
 };
 export default Activity;
 
-export const getStaticPaths = async () => {
+/* export const getStaticPaths = async () => {
   try {
     const req = await fetch("http://localhost:3000/api/info");
     const res = await req.json();
@@ -50,7 +47,7 @@ export async function getStaticProps({ params }) {
     const res = await fetch(`
     http://localhost:3000/api/info/${params.id}`);
     const data = await res.json();
-    const data_activities = data.activities.traverls;
+    const data_activities = await data.activities;
 
     if (!data_activities) {
       return {
@@ -59,15 +56,10 @@ export async function getStaticProps({ params }) {
     }
 
     return {
-      props: { data: data_activities },
+      props: { data },
     };
   } catch (error) {
     console.log(error);
-    return {
-      redirect: {
-        destination: "/",
-        statusCode: 307,
-      },
-    };
   }
 }
+ */
