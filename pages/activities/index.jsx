@@ -89,7 +89,7 @@ const Activities = ({ data }) => {
 
 export default Activities;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   try {
     const res = await fetch("http://localhost:3000/api/info");
     const data = await res.json();

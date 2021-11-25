@@ -48,7 +48,7 @@ const About = ({ data }) => {
 
 export default About;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const res = await fetch("http://localhost:3000/api/info");
   const data = await res.json();
   const data_people = data.people;
