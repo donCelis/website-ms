@@ -5,16 +5,18 @@ const useFilter = (import_data, name = "") => {
   const [categories, setCategories] = useState("");
   const [category, setCategory] = useState(name);
 
+  const handleSetCategory = (setItem) => setCategory(setItem);
+
   useEffect(() => {
-    setCategories(Object.keys(import_data)),
-      categories.length === 0 && setCategory(name);
+    setCategories(Object.keys(import_data));
+    categories.length === 0 && setCategory(name);
   }, []);
 
   return {
     data,
     categories,
-    setCategory,
     category,
+    handleSetCategory,
   };
 };
 

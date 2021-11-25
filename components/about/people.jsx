@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useFilter } from "hooks";
 
 const People = ({ content }) => {
-  const { data, category, categories, setCategory } = useFilter(
+  const { data, category, categories, handleSetCategory } = useFilter(
     content,
     "web-dev"
   );
@@ -18,7 +18,7 @@ const People = ({ content }) => {
             categories.map((name, id) => (
               <li key={id} className="category-item">
                 <button
-                  onClick={() => setCategory(name)}
+                  onClick={() => handleSetCategory(name)}
                   className={`button-filter button-filter-sm ${
                     name === category ? "active" : ""
                   }`}
