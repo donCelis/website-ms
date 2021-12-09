@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Head from "next/head";
 
 import "public/bootstrap/css/bootstrap.min.css";
-import "@styles/globals.scss";
+import "styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import "@styles/components/footer.scss";
+import "styles/components/footer.scss";
 import { menu_links, socials_links } from "data";
 
 const Footer = () => {

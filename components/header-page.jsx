@@ -1,4 +1,4 @@
-import "@styles/components/header-page.scss";
+import "styles/components/header-page.scss";
 
 const Header_page = ({ children, mod = "" }) => {
   return (

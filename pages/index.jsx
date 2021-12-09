@@ -1,13 +1,13 @@
-import Layout from "@components/layout";
+import Layout from "components/layout";
 /* Components */
-import Slider from "@components/home/slider";
-import Features from "@components/home/features";
-import Services from "@components/home/services";
-import Partners from "@components/home/partners";
-import To_action from "@components/home/toaction";
+import Slider from "components/home/slider";
+import Features from "components/home/features";
+import Services from "components/home/services";
+import Partners from "components/home/partners";
+import To_action from "components/home/toaction";
 
 /* Styles */
-import "@styles/home.scss";
+import "styles/home.scss";
 
 const Home = ({ data }) => {
   const data_head = {

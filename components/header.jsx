@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "./navigation";
-import "@styles/components/header.scss";
+import "styles/components/header.scss";
 
 const Header = () => {
   return (

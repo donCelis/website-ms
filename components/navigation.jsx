@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "@styles/components/navigation.scss";
+import "styles/components/navigation.scss";
 import { menu_links } from "data";
 
 import { useRouter } from "next/router";

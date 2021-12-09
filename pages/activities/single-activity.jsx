@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Header_page from "@components/header-page";
-import Layout from "@components/layout";
-import "@styles/single-activity.scss";
+import Header_page from "components/header-page";
+import Layout from "components/layout";
+import "styles/single-activity.scss";
 
 import { capitalize_firstLetter, conver_date } from "tools";
-import Slider_post from "@components/activities/slider-post";
+import Slider_post from "components/activities/slider-post";
 
 const Single_activity = ({ content }) => {
   const filter_category = Object.keys(content);

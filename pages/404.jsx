@@ -1,9 +1,9 @@
-import Layout from "@components/layout";
+import Layout from "components/layout";
 import Link from "next/link";
 
 import { menu_links } from "data";
 
-import "@styles/page-404.scss";
+import "styles/page-404.scss";
 
 const Page_404 = () => {
   const data_head = {

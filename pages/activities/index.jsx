@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-import Header_page from "@components/header-page";
-import Layout from "@components/layout";
+import Header_page from "components/header-page";
+import Layout from "components/layout";
 
-import "@styles/activities.scss";
+import "styles/activities.scss";
 
 import { useFilter } from "hooks";
 

@@ -1,5 +1,5 @@
-import Contact from "@components/contact-form";
-import Layout from "@components/layout";
+import Contact from "components/contact-form";
+import Layout from "components/layout";
 
 const Contact_page = () => {
   const data_head = {

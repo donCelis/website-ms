@@ -1,10 +1,10 @@
-import Layout from "@components/layout";
-import Header_page from "@components/header-page";
-import Description from "@components/about/description";
-import People from "@components/about/people";
-import Contact from "@components/contact-form";
+import Layout from "components/layout";
+import Header_page from "components/header-page";
+import Description from "components/about/description";
+import People from "components/about/people";
+import Contact from "components/contact-form";
 
-import "@styles/about.scss";
+import "styles/about.scss";
 
 const About = ({ data }) => {
   const data_head = {
