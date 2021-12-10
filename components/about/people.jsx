@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { useFilter } from "hooks";
+import { people } from "data";
 
-const People = ({ content }) => {
+const People = () => {
   const { data, category, categories, handleSetCategory } = useFilter(
-    content,
+    people,
     "web-dev"
   );
 

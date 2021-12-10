@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Header_page from "components/header-page";
 import Layout from "components/layout";
+import Header_page from "components/header-page";
+import { activities } from "data";
 
 import "styles/activities.scss";
 
@@ -10,9 +11,9 @@ import { useFilter } from "hooks";
 
 import { capitalize_firstLetter, conver_date } from "tools";
 
-const Activities = ({ content }) => {
+const Activities = () => {
   const { data, category, categories, handleSetCategory } = useFilter(
-    content,
+    activities,
     "travels"
   );
   const data_head = {
@@ -91,25 +92,3 @@ const Activities = ({ content }) => {
 };
 
 export default Activities;
-
-export async function getStaticProps(context) {
-  try {
-    const res = await fetch(
-      "https://619d28e8131c600017088db9.mockapi.io/api/ilogica/data"
-    );
-    const data = await res.json();
-    const data_activities = data[0].activities;
-
-    if (!data_activities) {
-      return {
-        notFound: true,
-      };
-    }
-
-    return {
-      props: { content: data_activities },
-    };
-  } catch (error) {
-    console.log(error);
-  }
-}
