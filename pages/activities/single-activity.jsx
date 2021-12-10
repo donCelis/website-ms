@@ -1,6 +1,8 @@
 import Link from "next/link";
-import Header_page from "components/header-page";
+import Image from "next/image";
 import Layout from "components/layout";
+import Header_page from "components/header-page";
+import post_photo from "public/images/single-post/single-article.webp";
 import "styles/single-activity.scss";
 
 import { capitalize_firstLetter, conver_date } from "tools";
@@ -8,7 +10,6 @@ import Slider_post from "components/activities/slider-post";
 
 const Single_activity = ({ content }) => {
   const filter_category = Object.keys(content);
-  console.log(filter_category);
   const filter_data = content.travels.filter((item, key) => key < 3);
 
   const data_head = {
@@ -64,14 +65,17 @@ const Single_activity = ({ content }) => {
             <article className="post">
               <header className="post-header">
                 <h2>Lorem ipsum dolor sit</h2>
-                <figure className="mb-4">
-                  <img
-                    className="img-fluid"
-                    src="/images/single-post/single-article.jpg"
-                    alt=""
+                <figure className="mb-4 post-header-photo">
+                  <Image
+                    src={post_photo}
+                    layout="responsive"
+                    objectFit="cover"
+                    alt="single-article"
                   />
                 </figure>
-                <small>28 nov 2018 · 1 min de lectura</small>
+                <small>
+                  <div>28 nov 2018 · 1 min de lectura</div>
+                </small>
               </header>
               <section className="post-body">
                 <p>

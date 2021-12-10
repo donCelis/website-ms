@@ -1,6 +1,6 @@
 import "styles/components/contact.scss";
 
-const Contact = () => {
+const Contact = ({ title = "Contacto" }) => {
   return (
     <section className="contact">
       <div className="container-fluid">
@@ -11,7 +11,7 @@ const Contact = () => {
                 <figure className="icon-form">
                   <img src="./images/icons/icon-form.svg" alt="icon-form" />
                 </figure>
-                <h2 className="mt-5 mb-3">Contacto</h2>
+                <h2 className="mt-5 mb-3">{title}</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -47,9 +47,35 @@
       @include tablet {
         color: var(--dark);
       }
+      h2{
+        margin-bottom: 2rem;
+      }
+      &-photo img {
+        border-top-left-radius: var(--br-10);
+        border-bottom-left-radius: var(--br-10);
+      }
       small {
+        display: block;
         color: var(--gray);
         margin-top: 1rem;
+        position: relative;
+        div {
+          display: inline-block;
+          background: white;
+          position: relative;
+          z-index: 1;
+          padding-right: 1rem;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background: #c2c2c2;
+          width: 100%;
+          height: 0.1rem;
+        }
       }
     }
     &-body {

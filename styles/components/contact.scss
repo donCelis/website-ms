@@ -12,6 +12,8 @@
     background: url("/images/shape-left.svg") no-repeat left top,
       linear-gradient(140deg, var(--dusty-blue) 0%, var(--dark-grey-blue) 120%);
     height: 100%;
+    display: flex;
+    align-items: center;
     @include tablet {
       padding: 2rem 0;
     }
