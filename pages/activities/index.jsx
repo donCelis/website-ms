@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import Header_page from "components/header-page";
 import Layout from "components/layout";
@@ -51,7 +52,14 @@ const Activities = ({ content }) => {
                 >
                   <article className="card">
                     <figure className="wrapper-img">
-                      <img className="img-fluid" src={image} alt={title} />
+                      <Image
+                        src={image}
+                        layout="responsive"
+                        objectFit="cover"
+                        width={640}
+                        height={480}
+                        alt={title}
+                      />
                     </figure>
                     <small className="card-border">
                       <time dateTime={date}>{conver_date(date)}</time> -{" "}

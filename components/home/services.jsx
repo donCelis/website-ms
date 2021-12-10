@@ -1,10 +1,19 @@
+import Image from "next/image";
 import { services } from "data";
 
 const Item_service = ({ title, image, name_btn, mod = "", color = "red" }) => {
   return (
     <aside className={"g-col-12 " + mod}>
       <article className="services-card">
-        <img className="services-card-img" src={image} alt={title} />
+        <Image
+          src={image}
+          width={184}
+          height={90}
+          layout="fixed"
+          objectFit="contain"
+          className="services-card-img"
+          alt={title}
+        />
         <h3 className="services-card-title">{title}</h3>
         <button className={"button button-sm button-" + color}>
           {name_btn}

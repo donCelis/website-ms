@@ -1,11 +1,19 @@
+import Image from "next/image";
 import { features } from "data";
 
 const Item_feature = ({ title, image }) => {
   return (
-    <picture className="photo">
+    <figure className="photo">
       <p>{title}</p>
-      <img className="img-fluid" src={image} alt={title} />
-    </picture>
+      <Image
+        src={image}
+        width={300}
+        height={300}
+        layout="responsive"
+        objectFit="cover"
+        alt={title}
+      />
+    </figure>
   );
 };
 

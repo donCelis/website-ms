@@ -1,3 +1,6 @@
+import Image from "next/image";
+import imageInfo from "public/images/about/boat-daylight.jpg";
+
 const Description = () => {
   return (
     <section className="about-description">
@@ -24,10 +27,11 @@ const Description = () => {
           </aside>
           <aside className="g-col-12 g-col-md-12 g-col-lg-5 g-start-lg-8">
             <figure className="about-description-photo">
-              <img
-                src="/images/about/boat-daylight.jpg"
+              <Image
+                src={imageInfo}
+                layout="intrinsic"
+                objectFit="cover"
                 alt="boat-daylight"
-                className="img-fluid"
               />
             </figure>
           </aside>

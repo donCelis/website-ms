@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useFilter } from "hooks";
 
 const People = ({ content }) => {
@@ -34,9 +35,12 @@ const People = ({ content }) => {
             >
               <article className="card">
                 <figure className="wrapper-img">
-                  <img
-                    className="img-fluid"
+                  <Image
                     src={person.avatar}
+                    layout="responsive"
+                    objectFit="cover"
+                    width={640}
+                    height={480}
                     alt={person.name}
                   />
                 </figure>

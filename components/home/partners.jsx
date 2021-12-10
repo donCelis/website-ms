@@ -8,7 +8,7 @@ import { partners } from "data";
 const Item_partners = ({ image, alt }) => {
   return (
     <article className="partners-card">
-      <img className="partners-card-img img-fluid" src={image} alt={alt} />
+      <img className="img-fluid" src={image} alt={alt} />
     </article>
   );
 };

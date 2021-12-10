@@ -15,21 +15,21 @@ const menu_links = [
 
 const slider = [
   {
-    image: "/images/sliders/slider-1.jpg",
+    image: "/images/sliders/slider-1.webp",
     title: `Lorem ipsum dolor sit amet 1`,
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore.`,
     name_btn: "Lorem ipsum",
   },
   {
-    image: "/images/sliders/slider-1.jpg",
+    image: "/images/sliders/slider-1.webp",
     title: "Lorem ipsum dolor sit amet 2",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore.`,
     name_btn: "Lorem ipsum",
   },
   {
-    image: "/images/sliders/slider-1.jpg",
+    image: "/images/sliders/slider-1.webp",
     title: "Lorem ipsum dolor sit amet 3",
     paragraph: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
     do eiusmod tempor incididunt ut labore et dolore.`,
@@ -74,35 +74,35 @@ const services = [
 ];
 const partners = [
   {
-    image: "/images/partners/juegging.png",
+    image: "/images/partners/juegging.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/riverbed.png",
+    image: "/images/partners/riverbed.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/wise.png",
+    image: "/images/partners/wise.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/kiosko.png",
+    image: "/images/partners/kiosko.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/juegging.png",
+    image: "/images/partners/juegging.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/riverbed.png",
+    image: "/images/partners/riverbed.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/wise.png",
+    image: "/images/partners/wise.webp",
     alt: "Lorem ipsum",
   },
   {
-    image: "/images/partners/kiosko.png",
+    image: "/images/partners/kiosko.webp",
     alt: "Lorem ipsum",
   },
 ];

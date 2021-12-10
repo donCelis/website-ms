@@ -14,7 +14,6 @@
     img {
       transform: scale(1);
       transition: transform ease-in-out 500ms;
-      object-fit: cover;
       &:hover {
         transform: scale(1.1);
       }
