@@ -1,8 +1,6 @@
-@use "./components/partials" as *;
-
 /* components home */
-@import "./components/home/slider";
-@import "./components/home/features";
-@import "./components/home/services";
-@import "./components/home/partners";
-@import "./components/home/to-action";
+@use "./components/home/slider";
+@use "./components/home/features";
+@use "./components/home/services";
+@use "./components/home/partners";
+@use "./components/home/to-action";

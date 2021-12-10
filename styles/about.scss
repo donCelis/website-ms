@@ -1,5 +1,8 @@
 @use "./components/partials/" as *;
 
+@use "./components/filter-category";
+@use "./components/card";
+
 .about {
   &-description {
     background: var(--white-light);
@@ -48,6 +51,3 @@
     }
   }
 }
-
-@import "./components/filter-category.scss";
-@import "./components/card.scss";

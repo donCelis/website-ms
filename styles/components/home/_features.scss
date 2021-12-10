@@ -1,3 +1,5 @@
+@use "../partials/" as *;
+
 /* styles - features */
 .features {
   @include tablet {

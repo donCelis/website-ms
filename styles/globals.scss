@@ -1,5 +1,8 @@
 @use "./components/partials" as *;
 
+/* goblal components */
+@use "./components/button";
+
 /* Variables */
 :root {
   --tangerine: hsl(32, 100%, 50%);
@@ -70,6 +73,3 @@ figure {
     row-gap: 3rem;
   }
 }
-
-/* goblal components */
-@import "./components/button.scss";

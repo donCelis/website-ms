@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { menu_links } from "data";
 
+import { capitalize_firstLetter } from "tools";
+
 import "styles/page-404.scss";
 
 const Page_404 = () => {
@@ -30,7 +32,7 @@ const Page_404 = () => {
               <li key={key}>
                 <Link href={path}>
                   <a className={`button button-red button-lg`}>
-                    {name}
+                    {capitalize_firstLetter(name)}
                   </a>
                 </Link>
               </li>

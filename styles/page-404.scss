@@ -1,5 +1,5 @@
 @use "./components/partials/" as *;
-@import "./components/filter-category.scss";
+@use "./components/filter-category";
 
 .page-404 {
   padding: 8rem 0 6rem;

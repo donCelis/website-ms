@@ -11,8 +11,8 @@ const Contact = ({ title = "Contacto" }) => {
                 <figure className="icon-form">
                   <img src="./images/icons/icon-form.svg" alt="icon-form" />
                 </figure>
-                <h2 className="mt-5 mb-3">{title}</h2>
-                <p>
+                {title ? <h2 className="mt-5 mb-3">{title}</h2> : ""}
+                <p className={!title ? "mt-5" : ""}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
