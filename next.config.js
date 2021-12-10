@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  reactStrictMode: false,
+  reactStrictMode: true,
   images: {
     domains: ["fakestoreapi.com", "mockapi.io", "placeimg.com"],
   },
