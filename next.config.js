@@ -1,7 +1,9 @@
 const path = require("path");
+const postcss = require("postcss");
 
 module.exports = {
   reactStrictMode: true,
+  postcss: true,
   images: {
     domains: ["fakestoreapi.com", "mockapi.io", "placeimg.com"],
   },
