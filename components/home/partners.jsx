@@ -8,7 +8,7 @@ import { partners } from "data";
 const Item_partners = ({ image, alt }) => {
   return (
     <article className="partners-card">
-      <img className="img-fluid" src={image} alt={alt} />
+      <img loading="lazy" className="img-fluid" src={image} alt={alt} />
     </article>
   );
 };
@@ -45,7 +45,9 @@ const Partners = () => {
       <div className="container">
         <div className="text">
           <div className="line"></div>
-          <h3 className="partners-title size-med">Lorem ipsum dolor sit amet</h3>
+          <h3 className="partners-title size-med">
+            Lorem ipsum dolor sit amet
+          </h3>
         </div>
         <Swiper
           modules={[Navigation]}

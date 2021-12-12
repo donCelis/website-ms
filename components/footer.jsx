@@ -27,7 +27,12 @@ const Footer = () => {
               {socials_links.map(({ image, alt, link }, id) => (
                 <li key={id}>
                   <a target="_blank" rel="noopener noreferrer" href={link}>
-                    <img className="img-fluid" src={image} alt={alt} />
+                    <img
+                      loading="lazy"
+                      className="img-fluid"
+                      src={image}
+                      alt={alt}
+                    />
                   </a>
                 </li>
               ))}
