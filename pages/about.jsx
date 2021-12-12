@@ -1,4 +1,6 @@
 import Layout from "components/layout";
+
+/* Components */
 import Header_page from "components/header-page";
 import Description from "components/about/description";
 import People from "components/about/people";

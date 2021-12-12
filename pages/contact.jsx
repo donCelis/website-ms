@@ -1,4 +1,5 @@
 import Layout from "components/layout";
+/* Components */
 import Header_page from "components/header-page";
 import Contact from "components/contact-form";
 

@@ -8,9 +8,11 @@ import "styles/single-activity.scss";
 import { capitalize_firstLetter, conver_date } from "tools";
 import Slider_post from "components/activities/slider-post";
 
-const Single_activity = ({ content }) => {
-  const filter_category = Object.keys(content);
-  const filter_data = content.travels.filter((item, key) => key < 3);
+import { activities } from "data";
+
+const Single_activity = () => {
+  const filter_category = Object.keys(activities);
+  const filter_data = activities.travels.filter((item, key) => key < 3);
 
   const data_head = {
     title: "Single page - Website - Ms",
@@ -191,25 +193,3 @@ const Single_activity = ({ content }) => {
   );
 };
 export default Single_activity;
-
-export async function getStaticProps(context) {
-  try {
-    const res = await fetch(
-      "https://619d28e8131c600017088db9.mockapi.io/api/ilogica/data"
-    );
-    const data = await res.json();
-    const data_activities = data[0].activities;
-
-    if (!data_activities) {
-      return {
-        notFound: true,
-      };
-    }
-
-    return {
-      props: { content: data_activities },
-    };
-  } catch (error) {
-    console.log(error);
-  }
-}

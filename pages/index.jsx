@@ -9,7 +9,7 @@ import To_action from "components/home/toaction";
 /* Styles */
 import "styles/home.scss";
 
-const Home = ({ data }) => {
+const Home = () => {
   const data_head = {
     title: "Home - Website - Ms",
     description: "Prueba realizada para Ilógica",
