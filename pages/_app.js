@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import Head from "next/head";
 
-import "public/bootstrap/css/bootstrap-optimize.min.scss";
+// import "public/bootstrap/css/bootstrap-optimize.min.scss";
+import "bootstrap/dist/css/bootstrap.min.css"
 import "styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
